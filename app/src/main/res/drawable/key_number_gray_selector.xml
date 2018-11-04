@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_pressed="false">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/common_text_normal" />
+        </shape>
+    </item>
+
+    <item android:state_pressed="true">
+        <layer-list>
+            <item
+                android:left="@dimen/item_spacing5"
+                android:top="@dimen/item_spacing5"
+                android:right="@dimen/item_spacing5"
+                android:bottom="@dimen/item_spacing5">
+                <shape>
+                    <solid android:color="@color/common_text_gray" />
+                </shape>
+            </item>
+        </layer-list>
+
+    </item>
+
+</selector>

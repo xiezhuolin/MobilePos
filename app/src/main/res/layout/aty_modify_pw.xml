@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/bbutton_info_dish_item"
+              android:orientation="vertical">
+
+    <cn.acewill.mobile.pos.widget.TitleView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:id="@+id/login_title"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="@dimen/dp50"
+                                            app:rightLeftVisible="true"
+                                            app:titleText="修改密码"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/dp10"
+        android:paddingRight="@dimen/dp10"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:background="@color/white"
+                    android:visibility="gone"
+                    android:layout_height="@dimen/dp0.5"/>
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/lin_login"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <!--密码-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp55"
+                android:background="@drawable/border_main_white"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:layout_marginTop="@dimen/dp20"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp15"
+                    android:background="@drawable/login_main_pw"
+                    />
+                <cn.acewill.mobile.pos.widget.CommonEditText
+                    android:id="@+id/login_old_pw_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    android:hint="@string/input_old_password"
+                    android:inputType="textPassword"
+                    android:paddingLeft="@dimen/item_spacing10"
+                    android:textSize="@dimen/str_defaul_16"/>
+            </LinearLayout>
+
+            <!--密码-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp55"
+                android:background="@drawable/border_main_white"
+                android:focusable="true"
+                android:layout_marginTop="@dimen/dp20"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp15"
+                    android:background="@drawable/login_main_pw"
+                    />
+                <cn.acewill.mobile.pos.widget.CommonEditText
+                    android:id="@+id/login_new_1_pw_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    android:hint="@string/input_new_password"
+                    android:inputType="textPassword"
+                    android:paddingLeft="@dimen/item_spacing10"
+                    android:textSize="@dimen/str_defaul_16"/>
+            </LinearLayout>
+
+            <!--密码-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp55"
+                android:background="@drawable/border_main_white"
+                android:focusable="true"
+                android:layout_marginTop="@dimen/dp20"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp15"
+                    android:background="@drawable/login_main_pw"
+                    />
+                <cn.acewill.mobile.pos.widget.CommonEditText
+                    android:id="@+id/login_new_2_pw_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    android:hint="@string/input_new_password_again"
+                    android:inputType="textPassword"
+                    android:paddingLeft="@dimen/item_spacing10"
+                    android:textSize="@dimen/str_defaul_16"/>
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tv_modify"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_selector_gray"
+                android:gravity="center"
+                android:paddingBottom="@dimen/dp10"
+                android:paddingTop="@dimen/dp10"
+                android:layout_marginTop="@dimen/dp20"
+                android:text="@string/modify_pw"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/wx_login_btn_font"/>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

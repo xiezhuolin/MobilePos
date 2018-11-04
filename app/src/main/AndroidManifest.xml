@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="cn.acewill.mobile.pos">
+
+    <uses-permission android:name="android.permission.MEDIA_MOUNTED"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.MANAGE_NEWLAND"/>
+    <uses-permission android:name="android.permission.MANAGE_NEWLANDUART3"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <!-- 允许访问振动设备 -->
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <!-- 允许使用相机 -->
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+
+    <uses-feature android:name="android.hardware.camera"/>
+    <!-- 相机自动聚焦 -->
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+    <!-- 屏幕保持唤醒，不锁屏的权限 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+
+    <!-- 开机自启服务权限 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+
+    <application
+        android:name="cn.acewill.mobile.pos.config.MyApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/pos_icon"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+        <activity android:name="cn.acewill.mobile.pos.ui.activity.SplashAty">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="cn.acewill.mobile.pos.ui.activity.ScanActivity"/>
+        <activity android:name="cn.acewill.mobile.pos.ui.activity.LoginAty"/>
+        <activity android:name="cn.acewill.mobile.pos.ui.activity.SettingActivity"/>
+        <activity android:name="cn.acewill.mobile.pos.ui.activity.OrderDishMainAty"/>
+        <activity android:name="cn.acewill.mobile.pos.ui.activity.CreateOrderAty"/>
+        <activity android:name="cn.acewill.mobile.pos.ui.activity.CheckOutNewAty"
+                  android:launchMode="singleTask"
+            />
+        <activity android:name="cn.acewill.mobile.pos.ui.activity.OrderInfoAty"/>
+        <activity android:name="cn.acewill.mobile.pos.ui.activity.DishCountAty"/>
+        <activity android:name="cn.acewill.mobile.pos.ui.activity.ModifyPwAty"/>
+        <activity android:name="cn.acewill.mobile.pos.ui.activity.ManageSetAty"/>
+        <activity android:name="cn.acewill.mobile.pos.ui.activity.CallGoodsAty"/>
+        <activity android:name="cn.acewill.mobile.pos.ui.activity.NetOrderInfoAty"/>
+        <activity android:name="cn.acewill.mobile.pos.ui.activity.TestPrintAty"/>
+        <activity
+            android:name="cn.acewill.mobile.pos.ui.activity.ShowReportAty"
+            android:theme="@style/setmeal_dialog"
+            />
+        <activity
+            android:name="cn.acewill.mobile.pos.ui.activity.UpLoadActivity"
+            android:theme="@style/setmeal_dialog2"
+            />
+        <activity
+            android:name="cn.acewill.mobile.pos.ui.activity.MemberAty"
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation"
+            />
+        <activity
+            android:name="cn.acewill.mobile.pos.ui.activity.CardRecordsAty"
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan"
+            />
+        <activity
+            android:name="cn.acewill.mobile.pos.ui.activity.ErrPrinteAty"
+            android:theme="@style/setmeal_dialog"/>
+        <activity
+            android:name="cn.acewill.mobile.pos.ui.activity.ErrTipsAty"
+            android:theme="@style/setmeal_dialog2"/>
+        <activity
+            android:name="cn.acewill.mobile.pos.ui.activity.PackagerAty"
+            android:theme="@style/setmeal_dialog"/>
+
+
+        <service
+            android:name="com.gprinter.service.GpPrintService"
+            android:enabled="true"
+            android:exported="true"
+            android:label="GpPrintService"
+            android:process=":remote"
+            >
+            <intent-filter>
+                <action android:name="com.gprinter.aidl.GpPrintService"/>
+            </intent-filter>
+        </service>
+
+
+    </application>
+
+</manifest>

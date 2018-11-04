@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/border"
+            android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <cn.acewill.mobile.pos.widget.ComTextView
+                android:id="@+id/wsh_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:paddingTop="@dimen/dp10"
+                android:paddingBottom="@dimen/dp10"
+                android:text="@string/meituan_verification_voucher"
+                android:textColor="@color/bbutton_info"
+                app:textSize="20"/>
+
+            <cn.acewill.mobile.pos.widget.ComTextView
+                android:id="@+id/mt_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:paddingTop="@dimen/dp10"
+                android:paddingBottom="@dimen/dp10"
+                android:paddingLeft="@dimen/item_spacing30"
+                android:paddingRight="@dimen/item_spacing15"
+                android:text="@string/close"
+                android:textColor="@color/bbutton_info"
+                app:textSize="20"/>
+        </RelativeLayout>
+
+        <View style="@style/sty_line"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/item_spacing20"
+            android:layout_marginLeft="@dimen/item_spacing10"
+            android:layout_marginRight="@dimen/item_spacing10"
+            android:layout_marginTop="@dimen/item_spacing10"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rel_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_not_pay_price_hine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/item_spacing10"
+                    android:text="@string/order_price"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/str_defaul_16"/>
+
+                <TextView
+                    android:id="@+id/tv_not_pay_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tv_not_pay_price_hine"
+                    android:gravity="center"
+                    android:padding="@dimen/item_spacing10"
+                    android:text="¥ 0.00"
+                    android:textColor="@color/app_text_price_color"
+                    android:textSize="@dimen/str_defaul_16"/>
+
+                <TextView
+                    android:id="@+id/tv_pay_price_hine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp15"
+                    android:layout_toRightOf="@+id/tv_not_pay_price"
+                    android:padding="@dimen/item_spacing10"
+                    android:text="@string/wait_price"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/str_defaul_16"/>
+
+                <TextView
+                    android:id="@+id/tv_pay_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tv_pay_price_hine"
+                    android:gravity="center"
+                    android:padding="@dimen/item_spacing10"
+                    android:text="¥ 0.00"
+                    android:textColor="@color/app_text_price_color"
+                    android:textSize="@dimen/str_defaul_16"/>
+
+                <TextView
+                    android:id="@+id/tv_tipss"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_not_pay_price_hine"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/dp5"
+                    android:paddingTop="@dimen/dp5"
+                    android:text="@string/meituan_tips"
+                    android:textColor="@color/app_text_price_color"
+                    android:textSize="@dimen/str_defaul_16"/>
+            </RelativeLayout>
+
+            <cn.acewill.mobile.pos.widget.ScrolListView
+                android:id="@+id/ticket_list"
+                style="@style/listView_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp3"
+                android:layout_marginBottom="@dimen/dp10"
+                android:layout_marginTop="@dimen/dp10"
+                android:divider="@color/line_gray"
+                android:dividerHeight="1dip"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:paddingTop="@dimen/dp10"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/query"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="@dimen/item_spacing50"
+                    android:layout_marginLeft="@dimen/dp30"
+                    android:layout_marginRight="@dimen/dp30"
+                    android:background="@drawable/btn_selector_blue"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/item_spacing10"
+                    android:paddingRight="@dimen/item_spacing10"
+                    android:text="@string/query"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/str_defaul_16"/>
+
+                <TextView
+                    android:id="@+id/submit"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="@dimen/item_spacing50"
+                    android:layout_marginLeft="@dimen/dp30"
+                    android:layout_marginRight="@dimen/dp30"
+                    android:background="@drawable/btn_selector_blue"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/item_spacing10"
+                    android:paddingRight="@dimen/item_spacing10"
+                    android:text="@string/submit"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/str_defaul_16"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/wsh_warn"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/item_spacing45"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/common_text_pink"
+            android:textSize="@dimen/str_defaul_16"
+            android:visibility="gone"
+            />
+
+    </LinearLayout>
+
+
+</ScrollView>

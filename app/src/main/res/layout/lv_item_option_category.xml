@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white">
+
+    <TextView
+        android:id="@+id/tv_menu_name"
+        android:layout_width="@dimen/dp80"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/dp10"
+        android:text="@string/sth_cook"
+        android:textColor="@color/black"
+        android:textSize="@dimen/str_defaul_16"/>
+
+    <cn.acewill.mobile.pos.widget.ScrolGridView
+        android:id="@+id/gv_cook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/item_spacing5"
+        android:layout_marginLeft="@dimen/item_spacing10"
+        android:background="@color/white"
+        android:horizontalSpacing="@dimen/item_spacing10"
+        android:listSelector="@color/transparent"
+        android:numColumns="2"
+        android:padding="@dimen/item_spacing5"
+        android:scrollbars="none"
+        android:verticalSpacing="@dimen/item_spacing10"/>
+
+</LinearLayout>

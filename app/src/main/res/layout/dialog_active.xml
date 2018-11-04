@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/border">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="@dimen/item_spacing2"
+        android:background="@color/white_order_title"
+        >
+        <TextView
+            android:id="@+id/active_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:paddingRight="@dimen/item_spacing15"
+            android:paddingLeft="@dimen/item_spacing15"
+            android:gravity="center"
+            android:paddingTop="@dimen/dp10"
+            android:paddingBottom="@dimen/dp10"
+            android:text="@string/common_cancel"
+            android:textSize="@dimen/str_defaul_18"
+            android:textColor="@color/bbutton_info"
+             />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:text="@string/full_offer"
+            android:padding="@dimen/dp10"
+            android:textSize="@dimen/str_defaul_18"
+            android:textColor="@color/bbutton_info"
+             />
+        <TextView
+            android:id="@+id/active_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:paddingRight="@dimen/item_spacing15"
+            android:paddingLeft="@dimen/item_spacing30"
+            android:gravity="center"
+            android:textSize="@dimen/str_defaul_18"
+            android:text="@string/common_sure"
+            android:textColor="@color/bbutton_info"
+            android:visibility="gone"
+             />
+    </RelativeLayout>
+    <View style="@style/sty_line"/>
+
+    <ListView
+        style="@style/listView_style"
+        android:id="@+id/active_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/item_spacing10"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/none_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <ProgressBar
+            android:id="@+id/none_pro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/item_spacing10"
+            style="?android:attr/progressBarStyleSmall"/>
+        <TextView
+            android:id="@+id/none"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="@dimen/str_defaul_22"
+            android:text="@string/getting_marketing_campaigns"
+            android:textColor="@color/login_gray"
+            />
+    </LinearLayout>
+
+
+
+</LinearLayout>

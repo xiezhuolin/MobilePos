@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:id="@+id/rel_context"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:padding="@dimen/item_spacing3"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true" >
+
+        <ImageView
+            android:id="@+id/iv_reduce"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/icon_reduce" />
+
+        <TextView
+            android:id="@+id/tv_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/iv_reduce"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:text="0"
+            android:paddingRight="10dp"
+            android:layout_centerVertical="true"
+            android:textColor="@color/app_text_color"
+            android:textSize="25sp" />
+
+        <ImageView
+            android:id="@+id/iv_add"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv_count"
+            android:src="@mipmap/icon_add" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="name"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:paddingLeft="10dp"
+        android:gravity="left"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/rel_context"
+        android:textColor="@color/app_text_color"
+        android:textSize="18sp" />
+
+</RelativeLayout>

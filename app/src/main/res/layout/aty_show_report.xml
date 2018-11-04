@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:orientation="vertical"
+                android:padding="@dimen/dp10">
+
+    <LinearLayout
+        android:id="@+id/lin_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_spacing50"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/item_spacing20"
+        android:layout_marginLeft="@dimen/item_spacing15"
+        android:layout_marginRight="@dimen/item_spacing15"
+        android:layout_marginTop="@dimen/item_spacing10"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/print_cancle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/item_spacing5"
+            android:layout_weight="1"
+            android:background="@drawable/btn_selector_gray"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/order_day_font_darkgray"
+            android:textSize="@dimen/str_defaul_16"/>
+
+        <TextView
+            android:id="@+id/print_ok"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/item_spacing5"
+            android:layout_weight="1"
+            android:background="@drawable/btn_selector_blue"
+            android:gravity="center"
+            android:text="日结并打印"
+            android:textColor="@color/white"
+            android:textSize="@dimen/str_defaul_16"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/sc_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/lin_top"
+        android:background="@color/white"
+        android:paddingTop="@dimen/dp10"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_titckTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingBottom="@dimen/dp10"
+                android:text="@string/daily_report_ticket"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp25"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tv_printerName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:paddingBottom="@dimen/dp10"
+                android:text="@string/daily_man"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp20"/>
+
+            <TextView
+                android:id="@+id/tv_timeStart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:paddingBottom="@dimen/dp10"
+                android:text="@string/start_time"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp20"/>
+
+            <TextView
+                android:id="@+id/tv_timeEnd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:paddingBottom="@dimen/dp10"
+                android:text="@string/end_time"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp20"/>
+
+            <TextView
+                android:id="@+id/tv_printTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:paddingBottom="@dimen/dp10"
+                android:text="@string/print_time"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp20"/>
+
+            <View
+                style="@style/sty_line"
+                />
+
+            <cn.acewill.mobile.pos.widget.ScrolListView
+                android:id="@+id/lv_report"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@color/transparent"
+                android:cacheColorHint="@color/transparent"
+                android:listSelector="@color/transparent"
+                android:footerDividersEnabled="true"
+                android:transcriptMode="normal"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    style="@style/sty_line"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_categorySales_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/dp10"
+                    android:paddingTop="@dimen/dp10"
+                    android:text="@string/customer_price_counts"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp20"/>
+
+                <View
+                    style="@style/sty_line"
+                    />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_orderCount_hine"
+                        style="@style/check_out_tickt_text"
+                        android:layout_width="wrap_content"
+                        android:text="@string/order_counts"
+                        android:textSize="@dimen/sp18"/>
+
+                    <TextView
+                        android:id="@+id/tv_count"
+                        style="@style/check_out_tickt_text"
+                        android:layout_width="wrap_content"
+                        android:layout_toRightOf="@+id/tv_orderCount_hine"
+                        android:gravity="right"
+                        android:text="@string/article"
+                        android:layout_alignParentRight="true"
+                        android:textSize="@dimen/sp18"/>
+                    <TextView
+                        android:id="@+id/tv_customerCount_hine"
+                        style="@style/check_out_tickt_text"
+                        android:layout_width="wrap_content"
+                        android:text="@string/guest_counts"
+                        android:layout_below="@+id/tv_orderCount_hine"
+                        android:textSize="@dimen/sp18"/>
+
+                    <TextView
+                        android:id="@+id/tv_customerCount"
+                        style="@style/check_out_tickt_text"
+                        android:layout_width="wrap_content"
+                        android:layout_toRightOf="@+id/tv_customerCount_hine"
+                        android:gravity="right"
+                        android:layout_below="@+id/tv_orderCount_hine"
+                        android:text="@string/people"
+                        android:layout_alignParentRight="true"
+                        android:textSize="@dimen/sp18"/>
+
+                    <TextView
+                        android:id="@+id/tv_pricePer_hine"
+                        style="@style/check_out_tickt_text"
+                        android:layout_width="wrap_content"
+                        android:text="@string/average_order_amount"
+                        android:layout_below="@+id/tv_customerCount_hine"
+                        android:textSize="@dimen/sp18"/>
+
+                    <TextView
+                        android:id="@+id/tv_pricePer"
+                        style="@style/check_out_tickt_text"
+                        android:layout_width="wrap_content"
+                        android:layout_toRightOf="@+id/tv_pricePer_hine"
+                        android:gravity="right"
+                        android:layout_below="@+id/tv_customerCount_hine"
+                        android:text="@string/yuan"
+                        android:layout_alignParentRight="true"
+                        android:textSize="@dimen/sp18"/>
+
+                    <TextView
+                        android:id="@+id/tv_pricePerCustomer_hine"
+                        style="@style/check_out_tickt_text"
+                        android:layout_width="wrap_content"
+                        android:text="@string/customer_price"
+                        android:layout_below="@+id/tv_pricePer_hine"
+                        android:textSize="@dimen/sp18"/>
+
+                    <TextView
+                        android:id="@+id/tv_pricePerCustomer"
+                        style="@style/check_out_tickt_text"
+                        android:layout_width="wrap_content"
+                        android:layout_toRightOf="@+id/tv_pricePerCustomer_hine"
+                        android:gravity="right"
+                        android:layout_below="@+id/tv_pricePer_hine"
+                        android:text="@string/yuan"
+                        android:layout_alignParentRight="true"
+                        android:textSize="@dimen/sp18"/>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

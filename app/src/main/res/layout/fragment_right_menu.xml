@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/right_menu_ll"
+              android:layout_width="250dp"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:clickable="true"
+              android:orientation="vertical"
+              android:paddingTop="@dimen/dp30">
+
+    <TextView
+        android:id="@+id/workshift_btn"
+        android:layout_width="@dimen/dp80"
+        android:layout_height="@dimen/dp80"
+        android:layout_gravity="center"
+        android:background="@drawable/circle_yellow_selector"
+        android:gravity="center"
+        android:text="交班"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp16"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp10"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/login_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/login_gray"
+            android:textSize="@dimen/sp15"/>
+
+        <TextView
+            android:id="@+id/work_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp10"
+            android:text=""
+            android:textColor="@color/login_gray"
+            android:textSize="@dimen/sp15"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/version_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="xxxxx"
+        android:textColor="@color/login_gray"
+        android:textSize="@dimen/sp15"/>
+
+    <View
+        style="@style/sty_line"
+        android:layout_marginTop="@dimen/dp20"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/logout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp45"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/dp10"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_marginRight="@dimen/dp10"
+            android:background="@drawable/btn_selector_bright_blue"
+            android:gravity="center"
+            android:text="注&#12288;销"
+            android:textColor="@color/white"/>
+
+        <ScrollView
+            android:id="@+id/scll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/logout"
+            android:scrollbars="none">
+
+            <cn.acewill.mobile.pos.widget.ScrolListView
+                android:id="@+id/lv_item"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/dp5"
+                android:background="@color/white"
+                android:divider="@color/line_gray"
+                android:dividerHeight="1dip"
+                android:footerDividersEnabled="true"
+                android:transcriptMode="normal"
+                />
+        </ScrollView>
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/rel_count"
+    >
+
+    <LinearLayout
+        android:id="@+id/ll_dish_kind"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp60"
+        android:orientation="horizontal"
+        android:background="@color/transform"
+
+        >
+
+        <TextView
+            android:id="@+id/tv_dishKinds"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp60"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:padding="@dimen/dp3"
+            android:ellipsize="end"
+            android:text="我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我"
+            android:maxLines="2"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp14"
+            />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/dish_kind_line"
+        style="@style/sty_line"
+        android:layout_marginLeft="@dimen/dp5"
+        android:layout_marginRight="@dimen/dp5" />
+
+</RelativeLayout>

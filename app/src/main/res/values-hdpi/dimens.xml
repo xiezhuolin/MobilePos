@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="wx_login_layout_height">60dp</dimen>
+
+    <dimen name="wx_scan_font">20sp</dimen>
+    <dimen name="wx_login_btn_font">18sp</dimen>
+    <dimen name="wx_login_top_font">20sp</dimen>
+    <dimen name="wx_login_version_font">11sp</dimen>
+
+</resources>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/border"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:id="@+id/eat_in_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_selector_gray"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp8">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp40"
+                android:gravity="center"
+                android:paddingRight="@dimen/dp25"
+                android:text="堂食"
+                android:textColor="@color/text_selector"
+                android:textSize="@dimen/sp14"
+                />
+
+            <ImageView
+                android:layout_width="@dimen/dp15"
+                android:layout_height="@dimen/dp15"
+                android:layout_gravity="center"
+                android:src="@drawable/order_type_selector"/>
+        </LinearLayout>
+
+        <View style="@style/sty_line"/>
+
+        <LinearLayout
+            android:id="@+id/tack_out_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_selector_gray"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp8">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp40"
+                android:gravity="center"
+                android:paddingRight="@dimen/dp25"
+                android:text="外带"
+                android:textColor="@color/text_selector"
+                android:textSize="@dimen/sp14"
+                />
+
+            <ImageView
+                android:layout_width="@dimen/dp15"
+                android:layout_height="@dimen/dp15"
+                android:layout_gravity="center"
+                android:src="@drawable/order_type_selector"/>
+        </LinearLayout>
+
+        <View style="@style/sty_line"/>
+
+        <LinearLayout
+            android:id="@+id/sale_out_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_selector_gray"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp8">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp40"
+                android:gravity="center"
+                android:paddingRight="@dimen/dp25"
+                android:text="外卖"
+                android:textColor="@color/text_selector"
+                android:textSize="@dimen/sp14"
+                />
+
+            <ImageView
+                android:layout_width="@dimen/dp15"
+                android:layout_height="@dimen/dp15"
+                android:layout_gravity="center"
+                android:src="@drawable/order_type_selector"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

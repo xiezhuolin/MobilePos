@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <cn.acewill.mobile.pos.widget.TitleView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:id="@+id/login_title"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="@dimen/dp50"
+                                            app:rightLeftVisible="true"
+                                            app:titleText="@string/test_printer"/>
+
+    <LinearLayout
+        android:id="@+id/lin_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_spacing60"
+        android:orientation="horizontal"
+        android:paddingRight="@dimen/dp3"
+        >
+
+        <TextView
+            android:id="@+id/all_ord"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7"
+            android:gravity="center"
+            android:text="@string/name"
+            android:textColor="@color/pay_type_colors"
+            android:textSize="@dimen/str_defaul_14"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tack_out_ord"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.6"
+            android:gravity="center"
+            android:text="IP"
+            android:textColor="@color/pay_type_colors"
+            android:textSize="@dimen/str_defaul_14"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/online_ord"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/associate_POS_or_stalls"
+            android:textColor="@color/pay_type_colors"
+            android:textSize="@dimen/str_defaul_14"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/unpayde_ord"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7"
+            android:gravity="center"
+            android:text="@string/state"
+            android:textColor="@color/pay_type_colors"
+            android:textSize="@dimen/str_defaul_14"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/payde_ord"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7"
+            android:gravity="center"
+            android:text="@string/sth_home_do"
+            android:textColor="@color/pay_type_colors"
+            android:textSize="@dimen/str_defaul_14"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_spacing0.5"
+        android:background="@color/gray"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dp3"
+        android:paddingRight="@dimen/dp3"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/printer"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp20"
+            android:visibility="gone"/>
+
+        <TextView
+            style="@style/sty_line"
+            android:layout_marginTop="@dimen/dp3"
+            android:visibility="gone"/>
+
+        <ListView
+            android:id="@+id/lv_printer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tv_line"
+            android:layout_marginTop="@dimen/item_spacing3"
+            android:divider="@null"
+            android:dividerHeight="0dip"
+            android:footerDividersEnabled="true"
+            android:transcriptMode="normal"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dp3"
+        android:paddingRight="@dimen/dp3">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="KDS"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp20"
+            android:visibility="gone"/>
+
+        <TextView
+            style="@style/sty_line"
+            android:layout_marginTop="@dimen/dp3"
+            android:visibility="gone"/>
+
+        <ListView
+            android:id="@+id/lv_KDS"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tv_line"
+            android:layout_marginTop="@dimen/item_spacing3"
+            android:divider="@null"
+            android:dividerHeight="0dip"
+            android:footerDividersEnabled="true"
+            android:transcriptMode="normal"
+            />
+
+
+    </LinearLayout>
+
+</LinearLayout>

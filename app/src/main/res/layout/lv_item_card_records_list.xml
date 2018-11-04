@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp70"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/item_spacing15"
+            android:paddingRight="@dimen/item_spacing15"
+            >
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="时间"
+                android:gravity="center"
+                android:textColor="@color/order_day_font_darkgray"
+                android:textSize="@dimen/str_defaul_16"
+                />
+            <TextView
+                android:id="@+id/tv_orderId"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="0001"
+                android:textColor="@color/order_day_font_darkgray"
+                android:textSize="@dimen/str_defaul_16"
+                />
+            <TextView
+                android:id="@+id/tv_customer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="客户"
+                android:gravity="center"
+                android:textColor="@color/order_day_font_darkgray"
+                android:textSize="@dimen/str_defaul_16"
+                />
+            <TextView
+                android:id="@+id/tv_contact"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3.5"
+                android:text="联系方式"
+                android:gravity="center"
+                android:lines="3"
+                android:ellipsize="end"
+                android:textColor="@color/order_day_font_darkgray"
+                android:textSize="@dimen/str_defaul_16"
+                />
+
+            <TextView
+                android:id="@+id/tv_money"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="订单金额"
+                android:gravity="center_horizontal"
+                android:textColor="@color/order_day_font_darkgray"
+                android:textSize="@dimen/str_defaul_16"
+                />
+
+            <RelativeLayout
+                android:id="@+id/rel_do"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:paddingTop="@dimen/item_spacing15"
+                android:paddingBottom="@dimen/item_spacing15"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/cancle_order"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/item_spacing5"
+                    android:background="@drawable/btn_selector_blue"
+                    android:gravity="center"
+                    android:text="@string/destruction_record"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/str_defaul_16" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <TextView style="@style/sty_line"
+        />
+</LinearLayout>

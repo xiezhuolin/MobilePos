@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:id="@+id/lin_count"
+              android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/type_name"
+        style="@style/check_out_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:background="@drawable/layout_selector_gray"
+        android:padding="@dimen/dp18"
+        android:text="111111"
+        android:textColor="@color/black"
+        android:textSize="@dimen/str_defaul_20"/>
+
+    <TextView
+        android:id="@+id/money"
+        style="@style/check_out_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.3"
+        android:visibility="invisible"
+        android:background="@drawable/layout_selector_gray"
+        android:padding="@dimen/dp18"
+        android:textColor="@color/black"
+        android:textSize="@dimen/str_defaul_20"/>
+</LinearLayout>

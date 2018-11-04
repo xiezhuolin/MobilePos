@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/border"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/rund_title"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp40"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/Please_choose_the_reason"
+        android:textColor="@color/gray_search_text"
+        android:textSize="@dimen/sp14" />
+
+    <View style="@style/sty_line" />
+
+    <cn.acewill.mobile.pos.widget.ScrolListView
+        android:id="@+id/reason_list"
+        style="@style/listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <View style="@style/sty_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="@dimen/dp50">
+
+        <LinearLayout
+            android:id="@+id/type_no"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/item_spacing10"
+            android:paddingRight="@dimen/item_spacing10"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/not_refunds"
+                android:gravity="center_vertical"
+                android:textColor="@color/gray_search_text"
+                android:textSize="@dimen/str_defaul_16"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/selector_order_type"
+                android:layout_gravity="center_vertical"
+                />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="50dp"
+            android:background="@color/bg_gray"
+            />
+
+        <LinearLayout
+            android:id="@+id/type_yes"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/item_spacing10"
+            android:paddingRight="@dimen/item_spacing10"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/refunds"
+                android:gravity="center_vertical"
+                android:textColor="@color/gray_search_text"
+                android:textSize="@dimen/str_defaul_16"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/selector_order_type"
+                android:layout_gravity="center_vertical"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <View style="@style/sty_line" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp45"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/cancle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/left_buttom_rediu"
+            android:gravity="center"
+            android:text="@string/common_cancel"
+            android:textColor="@color/common_green"
+            android:textSize="@dimen/sp15" />
+
+        <View
+            android:layout_width="@dimen/dp0.5"
+            android:layout_height="match_parent"
+            android:background="@color/line_gray" />
+
+        <TextView
+            android:id="@+id/ok"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/right_bottom_redio"
+            android:gravity="center"
+            android:text="@string/refunds"
+            android:textColor="@color/bbutton_danger_edge"
+            android:textSize="@dimen/sp15" />
+    </LinearLayout>
+
+
+</LinearLayout>

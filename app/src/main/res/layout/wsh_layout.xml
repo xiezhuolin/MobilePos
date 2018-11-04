@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/border"
+            android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/wsh_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="@dimen/dp10"
+                android:text="会员消费"
+                android:textColor="@color/bbutton_info"
+                android:textSize="@dimen/str_defaul_18"
+                />
+
+            <TextView
+                android:id="@+id/wsh_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:paddingBottom="@dimen/dp10"
+                android:paddingLeft="@dimen/item_spacing30"
+                android:paddingRight="@dimen/item_spacing15"
+                android:paddingTop="@dimen/dp10"
+                android:text="@string/close"
+                android:textColor="@color/bbutton_info"
+                android:textSize="@dimen/str_defaul_18"
+                />
+        </RelativeLayout>
+
+        <View style="@style/sty_line"/>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/item_spacing20"
+            android:layout_marginLeft="@dimen/item_spacing10"
+            android:layout_marginRight="@dimen/item_spacing10"
+            android:layout_marginTop="@dimen/item_spacing10"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <cn.acewill.mobile.pos.widget.CommonEditText
+                android:id="@+id/cardno"
+
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/item_spacing50"
+                android:layout_weight="1"
+                android:background="@drawable/border_layout_bg"
+                android:hint="@string/text_member_search"
+                android:inputType="number"
+                android:paddingLeft="@dimen/item_spacing10"
+                android:textColorHint="@color/login_gray"
+                android:textSize="@dimen/sp14"/>
+
+            <TextView
+                android:id="@+id/checkmember"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/item_spacing50"
+                android:layout_marginLeft="@dimen/item_spacing10"
+                android:background="@drawable/btn_selector_blue"
+                android:gravity="center"
+                android:paddingLeft="@dimen/item_spacing15"
+                android:paddingRight="@dimen/item_spacing15"
+                android:text="@string/member_verification"
+                android:textColor="@color/white"
+                android:textSize="@dimen/str_defaul_18"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_selectMemberCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <cn.acewill.mobile.pos.widget.ScrolListView
+                android:id="@+id/lv_memberCard"
+                style="@style/listView_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tv_sure"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lv_memberCard"
+                android:background="@drawable/btn_login_selector"
+                android:gravity="center"
+                android:padding="@dimen/dp10"
+                android:text="@string/common_sure"
+                android:textColor="@color/white"
+                android:textSize="@dimen/wx_login_btn_font"/>
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/wsh_warn"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/item_spacing45"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/common_text_pink"
+            android:textSize="@dimen/str_defaul_14"
+            android:visibility="gone"
+            />
+
+        <LinearLayout
+            android:id="@+id/wsh_info_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_spacing45"
+                android:layout_margin="@dimen/item_spacing10"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:textColor="@color/login_gray"
+                    android:textSize="@dimen/str_defaul_14"/>
+
+                <TextView
+                    android:id="@+id/cardnum_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/login_gray"
+                    android:textSize="@dimen/str_defaul_14"/>
+            </LinearLayout>
+
+            <!--优惠券-->
+            <LinearLayout
+                android:id="@+id/coupon_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:id="@+id/member_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/item_spacing10"
+                    android:text=""
+                    android:textColor="@color/login_gray"
+                    android:textSize="@dimen/str_defaul_14"/>
+
+                <TextView
+                    android:id="@+id/order_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/item_spacing10"
+                    android:text=""
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/str_defaul_14"/>
+
+                <!--储值-->
+                <RelativeLayout
+                    android:id="@+id/balance_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp15"
+                    android:orientation="horizontal"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_balance_hine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/item_spacing10"
+                        android:text="@string/stored_vsalue"
+                        android:textColor="@color/login_gray"
+                        android:textSize="@dimen/str_defaul_14"/>
+
+                    <CheckBox
+                        android:id="@+id/ck_select_balance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dp20"
+                        android:background="@drawable/selector_ck_area"
+                        android:button="@android:color/transparent"
+                        android:checked="false"/>
+
+                    <TextView
+                        android:id="@+id/tv_pay_balance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dp10"
+                        android:layout_toLeftOf="@+id/ck_select_balance"
+                        android:textColor="@color/login_gray"
+                        android:textSize="@dimen/str_defaul_14"/>
+
+                    <!--<cn.acewill.mobile.pos.widget.CommonEditText-->
+                    <!--android:id="@+id/balance"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="@dimen/item_spacing50"-->
+                    <!--android:layout_marginLeft="@dimen/item_spacing15"-->
+                    <!--android:layout_marginRight="@dimen/item_spacing15"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:digits="0123456789."-->
+                    <!--android:background="@drawable/border"-->
+                    <!--android:hint="请输入消费储值"-->
+                    <!--android:inputType="numberDecimal"-->
+                    <!--android:paddingLeft="@dimen/item_spacing10"/>-->
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/tv_coupon_hine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/item_spacing10"
+                    android:paddingBottom="@dimen/dp5"
+                    android:paddingTop="@dimen/dp5"
+                    android:text="优惠券"
+                    android:textColor="@color/login_gray"
+                    android:textSize="@dimen/str_defaul_14"/>
+
+                <cn.acewill.mobile.pos.widget.ScrolListView
+                    android:id="@+id/couponList"
+                    style="@style/listView_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+
+            <!--积分-->
+            <RelativeLayout
+                android:id="@+id/credit_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp15"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:id="@+id/tv_credit_hine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/item_spacing10"
+                    android:text="@string/integral"
+                    android:textColor="@color/login_gray"
+                    android:textSize="@dimen/str_defaul_14"/>
+
+                <CheckBox
+                    android:id="@+id/ck_select_credit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp20"
+                    android:background="@drawable/selector_ck_area"
+                    android:button="@android:color/transparent"
+                    android:checked="false"/>
+
+                <TextView
+                    android:id="@+id/tv_pay_credit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp10"
+                    android:layout_toLeftOf="@+id/ck_select_credit"
+                    android:textColor="@color/login_gray"
+                    android:textSize="@dimen/str_defaul_14"/>
+
+                <!--<cn.acewill.mobile.pos.widget.CommonEditText-->
+                <!--android:id="@+id/credit"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="@dimen/item_spacing50"-->
+                <!--android:layout_marginLeft="@dimen/item_spacing15"-->
+                <!--android:layout_marginRight="@dimen/item_spacing15"-->
+                <!--android:layout_weight="1"-->
+                <!--android:digits="0123456789"-->
+                <!--android:background="@drawable/border"-->
+                <!--android:hint="请输入消费积分"-->
+                <!--android:inputType="number"-->
+                <!--android:paddingLeft="@dimen/item_spacing10"/>-->
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_spacing45"
+                android:layout_marginBottom="@dimen/item_spacing15"
+                android:layout_marginLeft="@dimen/item_spacing10"
+                android:layout_marginRight="@dimen/item_spacing10"
+                android:layout_marginTop="@dimen/item_spacing20"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/cancle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/item_spacing10"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_selector_gray"
+                    android:gravity="center"
+                    android:text="@string/common_cancel"
+                    android:textColor="@color/login_gray"
+                    android:textSize="@dimen/str_defaul_14"/>
+
+                <TextView
+                    android:id="@+id/cancel_saveMember"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/item_spacing10"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_selector_blue"
+                    android:gravity="center"
+                    android:text="@string/cancle_but_save_member_info"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/str_defaul_14"/>
+
+                <TextView
+                    android:id="@+id/use"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/item_spacing10"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_selector_blue"
+                    android:gravity="center"
+                    android:text="@string/trade_preview"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/str_defaul_14"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</ScrollView>

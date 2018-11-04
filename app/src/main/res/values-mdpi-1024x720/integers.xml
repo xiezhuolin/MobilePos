@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="wx_login_icon_weight" type="integer">1</item>
+    <item name="wx_scan_size" type="integer">29</item>
+</resources>

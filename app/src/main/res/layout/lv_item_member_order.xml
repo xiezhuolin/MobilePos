@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/order_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp40"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dp10"
+        android:paddingRight="@dimen/dp10"
+        android:background="@drawable/layout_selector_gray"
+        >
+        <TextView
+            android:id="@+id/card_type"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/member_card_type"
+            android:gravity="center"
+            android:textColor="@color/login_gray"
+            android:textSize="@dimen/sp14"
+            />
+        <TextView
+            android:id="@+id/member_numbs"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/member_card_number"
+            android:gravity="center"
+            android:textColor="@color/login_gray"
+            android:textSize="@dimen/sp14"
+            />
+        <TextView
+            android:id="@+id/member_phone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/phone_number"
+            android:gravity="center"
+            android:textColor="@color/login_gray"
+            android:textSize="@dimen/sp14"
+            />
+        <TextView
+            android:id="@+id/member_level"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/card_level"
+            android:gravity="center"
+            android:textColor="@color/login_gray"
+            android:textSize="@dimen/sp14"
+            />
+
+        <TextView
+            android:id="@+id/card_holder"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/cardholder_name"
+            android:textColor="@color/login_gray"
+            android:textSize="@dimen/sp14" />
+        <TextView
+            android:id="@+id/card_sex"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/cardholder_sex"
+            android:textColor="@color/login_gray"
+            android:textSize="@dimen/sp14" />
+
+        <TextView
+            android:id="@+id/card_open_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/activate_card_time"
+            android:textColor="@color/login_gray"
+            android:textSize="@dimen/sp14" />
+
+    </LinearLayout>
+    <View
+        style="@style/sty_line"
+        android:layout_marginLeft="@dimen/dp10"
+        android:layout_marginRight="@dimen/dp10"/>
+
+</LinearLayout>

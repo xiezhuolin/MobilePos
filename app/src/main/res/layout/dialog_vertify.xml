@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+    android:layout_height="match_parent"
+              android:background="@drawable/border"
+              android:focusable="true"
+              android:focusableInTouchMode="true"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_spacing35"
+        android:layout_margin="@dimen/item_spacing2"
+        android:background="@color/white_order_title"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:text="@string/input_verification_code"
+            android:textColor="@color/login_gray"
+            android:textSize="@dimen/str_defaul_18"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_spacing45"
+        android:layout_marginTop="@dimen/item_spacing15"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/item_spacing10"
+        android:paddingRight="@dimen/item_spacing10"
+        >
+
+        <cn.acewill.mobile.pos.widget.CommonEditText
+            android:id="@+id/code"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/border"
+            android:hint="@string/input_verification_code"
+            android:inputType="textPassword"
+            android:paddingLeft="@dimen/item_spacing10"
+            android:textColor="@color/login_gray"
+            android:textColorHint="@color/order_line"
+            android:textSize="@dimen/str_defaul_20"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_spacing40"
+        android:layout_marginBottom="@dimen/item_spacing10"
+        android:layout_marginTop="@dimen/item_spacing20"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/item_spacing10"
+        android:paddingRight="@dimen/item_spacing10">
+
+        <TextView
+            android:id="@+id/dialog_cancle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/item_spacing5"
+            android:layout_weight="1"
+            android:background="@drawable/btn_selector_gray"
+            android:gravity="center"
+            android:text="@string/common_cancel"
+            android:textColor="@color/login_gray"
+            android:textSize="@dimen/str_defaul_20"
+            />
+
+        <TextView
+            android:id="@+id/dialog_ok"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/item_spacing5"
+            android:layout_weight="1"
+            android:background="@drawable/btn_selector_blue"
+            android:gravity="center"
+            android:text="@string/common_sure"
+            android:textColor="@color/white"
+            android:textSize="@dimen/str_defaul_20"
+            />
+    </LinearLayout>
+</LinearLayout>

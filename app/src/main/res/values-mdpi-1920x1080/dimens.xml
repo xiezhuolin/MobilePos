@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="wx_login_layout_height">60dp</dimen>
+    <dimen name="wx_scan_font">25sp</dimen>
+    <dimen name="wx_login_top_font">30sp</dimen>
+    <dimen name="key_text_font">20sp</dimen>
+    <dimen name="select_pay_size">18sp</dimen>
+    <dimen name="pay_type_font">18sp</dimen>
+
+
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="drag_item_normal_height">48dp</dimen>
+    <dimen name="drag_item_expand_height">96dp</dimen>
+
+    //头部标题栏的高
+    <dimen name="title_height">70dp</dimen>
+    <dimen name="title_text_size">30sp</dimen>
+
+
+    <dimen name="item_space_line">0.5dp</dimen>
+
+    //字体sp大小
+    <dimen name="str_defaul_10">10sp</dimen>
+    <dimen name="str_defaul_11">11sp</dimen>
+    <dimen name="str_defaul_12">12sp</dimen>
+    <dimen name="str_defaul_13">13sp</dimen>
+    <dimen name="str_defaul_14">14sp</dimen>
+    <dimen name="str_defaul_15">15sp</dimen>
+    <dimen name="str_defaul_16">16sp</dimen>
+    <dimen name="str_defaul_18">18sp</dimen>
+    <dimen name="str_defaul_20">20sp</dimen>
+    <dimen name="str_defaul_22">22sp</dimen>
+    <dimen name="str_defaul_24">24sp</dimen>
+    <dimen name="str_defaul_26">26sp</dimen>
+    <dimen name="str_defaul_28">26sp</dimen>
+    <dimen name="str_defaul_30">30sp</dimen>
+    <dimen name="str_defaul_40">40sp</dimen>
+    <dimen name="str_defaul_50">50sp</dimen>
+    <dimen name="str_defaul_60">60sp</dimen>
+
+    //控件宽度大小
+    <dimen name="item_spacing0.5">0.5dp</dimen>
+    <dimen name="item_spacing1">1dp</dimen>
+    <dimen name="item_spacing2">2dp</dimen>
+    <dimen name="item_spacing3">3dp</dimen>
+    <dimen name="item_spacing5">5dp</dimen>
+    <dimen name="item_spacing8">8dp</dimen>
+    <dimen name="item_spacing10">10dp</dimen>
+    <dimen name="item_spacing15">15dp</dimen>
+    <dimen name="item_spacing18">18dp</dimen>
+    <dimen name="item_spacing20">20dp</dimen>
+    <dimen name="item_spacing22">22dp</dimen>
+    <dimen name="item_spacing25">25dp</dimen>
+    <dimen name="item_spacing30">30dp</dimen>
+    <dimen name="item_spacing35">35dp</dimen>
+    <dimen name="item_spacing40">40dp</dimen>
+    <dimen name="item_spacing45">45dp</dimen>
+    <dimen name="item_spacing50">50dp</dimen>
+    <dimen name="item_spacing60">60dp</dimen>
+    <dimen name="item_spacing70">70dp</dimen>
+    <dimen name="item_spacing75">75dp</dimen>
+    <dimen name="item_spacing80">80dp</dimen>
+    <dimen name="item_spacing100">100dp</dimen>
+    <dimen name="item_spacing120">120dp</dimen>
+    <dimen name="item_spacing150">150dp</dimen>
+    <dimen name="item_spacing200">200dp</dimen>
+
+    <!-- padding一般距离 -->
+    <dimen name="text_normal_padding2">23dp</dimen>
+    <dimen name="text_normal_padding">16dp</dimen>
+    <dimen name="text_little_padding">13dp</dimen>
+    <dimen name="text_small_padding">5dp</dimen>
+
+
+    <!--dp-->
+
+    <dimen name="dp0.5">0.5dp</dimen>
+    <dimen name="dp1">1dp</dimen>
+    <dimen name="dp2">2dp</dimen>
+    <dimen name="dp3">3dp</dimen>
+    <dimen name="dp5">5dp</dimen>
+    <dimen name="dp6">6dp</dimen>
+    <dimen name="dp7">7dp</dimen>
+    <dimen name="dp8">8dp</dimen>
+    <dimen name="dp10">10dp</dimen>
+    <dimen name="dp12">12dp</dimen>
+    <dimen name="dp15">15dp</dimen>
+    <dimen name="dp18">18dp</dimen>
+    <dimen name="dp20">20dp</dimen>
+    <dimen name="dp25">25dp</dimen>
+    <dimen name="dp30">30dp</dimen>
+    <dimen name="dp35">35dp</dimen>
+    <dimen name="dp38">38dp</dimen>
+    <dimen name="dp40">40dp</dimen>
+    <dimen name="dp45">45dp</dimen>
+    <dimen name="dp50">50dp</dimen>
+    <dimen name="dp51">51dp</dimen>
+    <dimen name="dp55">55dp</dimen>
+    <dimen name="dp60">60dp</dimen>
+    <dimen name="dp65">65dp</dimen>
+    <dimen name="dp70">70dp</dimen>
+    <dimen name="dp80">80dp</dimen>
+    <dimen name="dp85">85dp</dimen>
+    <dimen name="dp90">90dp</dimen>
+    <dimen name="dp100">100dp</dimen>
+    <dimen name="dp110">110dp</dimen>
+    <dimen name="dp120">120dp</dimen>
+    <dimen name="dp150">150dp</dimen>
+    <dimen name="dp200">200dp</dimen>
+    <dimen name="dp250">250dp</dimen>
+    <dimen name="dp270">270dp</dimen>
+    <dimen name="dp350">350dp</dimen>
+
+
+    <!--sp-->
+
+    <dimen name="sp10">10sp</dimen>
+    <dimen name="sp11">11sp</dimen>
+    <dimen name="sp12">12sp</dimen>
+    <dimen name="sp13">13sp</dimen>
+    <dimen name="sp14">14sp</dimen>
+    <dimen name="sp15">15sp</dimen>
+    <dimen name="sp16">16sp</dimen>
+    <dimen name="sp17">17sp</dimen>
+    <dimen name="sp18">18sp</dimen>
+    <dimen name="sp20">20sp</dimen>
+    <dimen name="sp22">22sp</dimen>
+    <dimen name="sp25">25sp</dimen>
+    <dimen name="sp30">30sp</dimen>
+
+    <!--px-->
+    <dimen name="px30">30px</dimen>
+    <dimen name="px35">35px</dimen>
+    <dimen name="px40">40px</dimen>
+</resources>

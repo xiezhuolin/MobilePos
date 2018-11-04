@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="@dimen/dp20"
+            android:layout_height="@dimen/dp20"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/jiantou_up" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp5"
+            android:background="@drawable/border_yellow"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/dp2">
+
+            <TextView
+                android:id="@+id/order_report"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/layout_selector_gray"
+                android:gravity="center"
+                android:paddingBottom="@dimen/dp10"
+                android:paddingLeft="@dimen/dp5"
+                android:paddingRight="@dimen/dp5"
+                android:paddingTop="@dimen/dp10"
+                android:text="订单汇总"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp13" />
+
+            <View
+                style="@style/sty_line"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_marginRight="@dimen/dp10"
+                android:background="@color/white"
+                />
+
+            <TextView
+                android:id="@+id/pay_report"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/layout_selector_gray"
+                android:gravity="center"
+                android:paddingBottom="@dimen/dp10"
+                android:paddingLeft="@dimen/dp5"
+                android:paddingRight="@dimen/dp5"
+                android:paddingTop="@dimen/dp10"
+                android:text="支付统计"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp13" />
+
+            <View
+                style="@style/sty_line"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_marginRight="@dimen/dp10"
+                android:background="@color/white"
+                />
+            <TextView
+                android:id="@+id/dish_report"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/layout_selector_gray"
+                android:gravity="center"
+                android:paddingBottom="@dimen/dp10"
+                android:paddingLeft="@dimen/dp5"
+                android:paddingRight="@dimen/dp5"
+                android:paddingTop="@dimen/dp10"
+                android:text="菜品销售"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp13" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

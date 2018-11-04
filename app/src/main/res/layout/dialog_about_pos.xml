@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/border"
+              android:focusable="true"
+              android:focusableInTouchMode="true"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/wsh_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="@dimen/dp10"
+            android:text="@string/acewill_cloud_pos"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp22"
+            />
+
+    </RelativeLayout>
+
+    <View style="@style/sty_line"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/dp10"
+            android:paddingLeft="@dimen/dp10"
+            android:paddingRight="@dimen/dp10"
+            android:paddingTop="@dimen/dp10">
+
+            <TextView
+                style="@style/staff_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left|center_vertical"
+                android:text="@string/system_info"
+                android:textSize="@dimen/sp25"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp40"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/dp10">
+
+                <TextView
+                    style="@style/staff_style"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/software_version"/>
+
+                <TextView
+                    android:id="@+id/tv_appVersion"
+                    style="@style/staff_style"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:text="V 1.0.1"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp40"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/dp10">
+
+                <TextView
+                    style="@style/staff_style"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/android_version"/>
+
+                <TextView
+                    android:id="@+id/os_version"
+                    style="@style/staff_style"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:text="v4.4.4"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp40"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/dp10">
+
+                <TextView
+                    style="@style/staff_style"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/terminal_name"/>
+
+                <TextView
+                    android:id="@+id/device_Name"
+                    style="@style/staff_style"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:text="@string/device_name"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp40"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/dp10">
+
+                <TextView
+                    style="@style/staff_style"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/ip_address"/>
+
+                <TextView
+                    android:id="@+id/ip_address"
+                    style="@style/staff_style"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:text="192.168.1.1"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp40"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/dp10">
+
+                <TextView
+                    style="@style/staff_style"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/wifi_name"/>
+
+                <TextView
+                    android:id="@+id/wifi_name"
+                    style="@style/staff_style"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:text="wifiSSID"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp40"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/dp10">
+
+                <TextView
+                    style="@style/staff_style"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/cloud_pos_account_name"/>
+
+                <TextView
+                    android:id="@+id/user_Name"
+                    style="@style/staff_style"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:text="@string/administrator"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp60"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/dp10">
+
+                <TextView
+                    style="@style/staff_style"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/expire_time"/>
+
+                <TextView
+                    android:id="@+id/store_endTime"
+                    style="@style/staff_style"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/str_defaul_14"
+                    android:gravity="right|center_vertical"
+                    android:text="wifiSSID"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp40"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/dp10">
+
+                <TextView
+                    style="@style/staff_style"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/device_is_internet"/>
+
+                <TextView
+                    android:id="@+id/device_isInternet"
+                    style="@style/staff_style"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:text="@string/yes"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp70"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/dp10">
+
+                <TextView
+                    style="@style/staff_style"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/setting_service_address"/>
+
+                <TextView
+                    android:id="@+id/server_address"
+                    style="@style/staff_style"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:textSize="@dimen/str_defaul_14"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:text="sz.canxingjian,com"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp40"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/dp10">
+
+                <TextView
+                    style="@style/staff_style"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/storage"/>
+
+                <TextView
+                    android:id="@+id/memory_Size"
+                    style="@style/staff_style"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:text="0.0GB"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp40"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/dp10">
+
+                <TextView
+                    style="@style/staff_style"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/online_support"/>
+
+                <TextView
+                    style="@style/staff_style"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:text="2054849946"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp40"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/dp10">
+
+                <TextView
+                    style="@style/staff_style"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/consumer_hotline"/>
+
+                <TextView
+                    style="@style/staff_style"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:text="0755-89723768"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

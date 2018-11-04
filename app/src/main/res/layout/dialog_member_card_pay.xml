@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/border"
+              android:orientation="vertical"
+              >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_spacing35"
+        android:layout_margin="@dimen/item_spacing2"
+        android:background="@color/white_order_title"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:text="@string/please_pay_the_card_to_complete_the_payment"
+            android:textColor="@color/login_gray"
+            android:textSize="@dimen/str_defaul_20"
+            />
+        </RelativeLayout>
+
+    <EditText
+        android:id="@+id/et_member"
+        android:layout_width="0.1dp"
+        android:layout_height="0.1dp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp20"
+        android:paddingLeft="@dimen/dp20"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp25"/>
+
+    <TextView
+        android:id="@+id/tv_card_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp20"
+        android:paddingLeft="@dimen/dp20"
+        android:text="@string/card_numb"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp25"/>
+
+    <TextView
+        android:id="@+id/tv_balance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp20"
+        android:paddingLeft="@dimen/dp20"
+        android:text="@string/balance"
+        android:paddingBottom="@dimen/dp20"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp25"/>
+
+</LinearLayout>

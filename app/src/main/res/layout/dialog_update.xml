@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/border">
+
+    <TextView
+        android:id="@+id/uptitle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp40"
+        android:layout_margin="@dimen/dp2"
+        android:text="新版本更新"
+        android:gravity="center"
+        android:textColor="@color/blue_bg"
+        android:textSize="@dimen/sp15"
+        android:background="@color/white_order_title"
+        />
+    <View style="@style/sty_line"/>
+    <TextView
+        android:id="@+id/upcontent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp15"
+        android:layout_marginRight="@dimen/dp15"
+        android:layout_marginTop="@dimen/dp20"
+        android:layout_marginBottom="@dimen/dp20"
+        android:textSize="@dimen/sp14"
+        android:textColor="@color/login_gray"
+        android:text="更新内容"/>
+    <View style="@style/sty_line"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp40"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/cancle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/gray_search_text"
+            android:textSize="@dimen/sp15"
+            android:background="@drawable/left_buttom_rediu"
+            />
+        <View
+            android:layout_width="@dimen/dp0.5"
+            android:layout_height="match_parent"
+            android:background="@color/line_gray"/>
+        <TextView
+            android:id="@+id/ok"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="更新"
+            android:textColor="@color/gray_search_text"
+            android:textSize="@dimen/sp15"
+            android:background="@drawable/right_bottom_redio"
+            />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="wx_login_layout_height">40dp</dimen>
+
+    <dimen name="wx_scan_font">14sp</dimen>
+    <dimen name="wx_login_btn_font">20sp</dimen>
+    <dimen name="wx_login_top_font">25sp</dimen>
+    <dimen name="wx_login_version_font">12sp</dimen>
+    <dimen name="key_text_font">18sp</dimen>
+    <dimen name="select_pay_size">16sp</dimen>
+    <dimen name="pay_type_font">17sp</dimen>
+</resources>

@@ -1,0 +1,17 @@
+<resources>
+    <declare-styleable name="CustomTitleView">
+        <!--左侧-->
+        <attr name="leftIconVisible" format="boolean"/>
+        <!--中间标题-->
+        <attr name="titleText" format="string"/>
+
+        <!--右侧-->
+        <attr name="rightLeftVisible" format="boolean"/>
+        <attr name="rightTextVisible" format="boolean"/>
+        <attr name="rightLeftIcon" format="reference"/>
+        <attr name="rightIcon" format="reference"/>
+        <attr name="rightIconVisible" format="boolean"/>
+        <attr name="rightText" format="string"/>
+
+    </declare-styleable>
+</resources>

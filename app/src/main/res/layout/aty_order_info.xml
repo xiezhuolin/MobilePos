@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical"
+    >
+
+    <cn.acewill.mobile.pos.widget.TitleView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:id="@+id/login_title"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="@dimen/dp50"
+                                            app:rightLeftVisible="true"
+                                            app:titleText="@string/order_details"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:background="@color/white"
+                android:padding="@dimen/dp5"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/order_num"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="17000"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textColor="@color/main_order_item_bg"
+                        android:textSize="@dimen/str_defaul_18"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/order_tableName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="xx:A2"
+                        android:gravity="center"
+                        android:textColor="@color/main_order_item_bg"
+                        android:textSize="@dimen/str_defaul_18"
+                        />
+                    <TextView
+                        android:id="@+id/order_source"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="wx"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/dp5"
+                        android:paddingTop="@dimen/dp5"
+                        android:textColor="@color/black_gv_title"
+                        android:textSize="@dimen/str_defaul_18"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/order_eatType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/eat_in"
+                        android:gravity="center"
+                        android:textColor="@color/main_order_item_bg"
+                        android:textSize="@dimen/str_defaul_18"
+                        />
+                    <TextView
+                        android:id="@+id/order_paystate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/paid"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/dp5"
+                        android:paddingBottom="@dimen/dp5"
+                        android:textColor="@color/main_order_item_bg"
+                        android:textSize="@dimen/str_defaul_18"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+            <View
+                android:id="@+id/view_line5"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/lin_top"
+                android:background="@color/font_gray"/>
+
+            <RelativeLayout
+                android:id="@+id/rel_center_count"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/lin_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/item_spacing50"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/dish_list"
+                        android:textColor="@color/bbutton_info_order_blue"
+                        android:textSize="@dimen/str_defaul_18"
+                        android:textStyle="bold"
+                        />
+
+                    <TextView
+                        android:id="@+id/btn_receive"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/item_spacing40"
+                        android:layout_marginLeft="@dimen/item_spacing8"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_selector_bright_blue"
+                        android:gravity="center"
+                        android:text="@string/accept_order"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/str_defaul_18"
+                        android:visibility="invisible"
+                        />
+
+                    <TextView
+                        android:id="@+id/btn_refuse"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/item_spacing40"
+                        android:layout_marginLeft="@dimen/item_spacing8"
+                        android:layout_marginRight="@dimen/dp5"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_selector_red"
+                        android:gravity="center"
+                        android:text="@string/refuse"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/str_defaul_18"
+                        android:visibility="invisible"
+                        />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/lin_top"
+                    android:background="@color/font_gray"/>
+
+                <LinearLayout
+                    android:id="@+id/lin_tips"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_line"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dp10">
+
+                    <TextView
+                        android:id="@+id/order_dish_count"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/dish_menu_counts"
+                        android:textColor="@color/main_order_item_bg"
+                        android:textSize="@dimen/str_defaul_18"
+                        />
+
+                    <TextView
+                        android:id="@+id/order_customerAmount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/repast_counts"
+                        android:textColor="@color/main_order_item_bg"
+                        android:textSize="@dimen/str_defaul_18"
+                        />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view_line2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/lin_tips"
+                    android:background="@color/font_gray"/>
+
+                <cn.acewill.mobile.pos.widget.ScrolListView
+                    android:id="@+id/dish_list"
+                    style="@style/listView_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/view_line2"
+                    android:layout_margin="@dimen/dp3"
+                    android:divider="@color/line_gray"
+                    android:dividerHeight="1dip"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/lin_right"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp5"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/lin_right_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dp5">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp5"
+                        android:layout_marginRight="@dimen/dp5"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/order_creat_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="@dimen/dp5"
+                            android:text="@string/place_order_time"
+                            android:textColor="@color/main_order_item_bg"
+                            android:textSize="@dimen/str_defaul_18"
+                            />
+
+                        <TextView
+                            android:id="@+id/order_price"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="@dimen/dp5"
+                            android:text="@string/price"
+                            android:textColor="@color/main_order_item_bg"
+                            android:textSize="@dimen/str_defaul_18"
+                            />
+
+                        <TextView
+                            android:id="@+id/order_activeMoney"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="@dimen/dp5"
+                            android:text="@string/active_money"
+                            android:textColor="@color/main_order_item_bg"
+                            android:textSize="@dimen/str_defaul_18"
+                            />
+
+                        <TextView
+                            android:id="@+id/order_cost"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="@dimen/dp5"
+                            android:text="@string/cost"
+                            android:textColor="@color/main_order_item_bg"
+                            android:textSize="@dimen/str_defaul_18"
+                            />
+
+                        <TextView
+                            android:id="@+id/order_refundPrice"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="@dimen/dp5"
+                            android:text="@string/refind_prince"
+                            android:textColor="@color/main_order_item_bg"
+                            android:textSize="@dimen/str_defaul_18"
+                            android:visibility="gone"
+                            />
+
+                        <TextView
+                            android:id="@+id/order_refundTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="@dimen/dp5"
+                            android:text="@string/refind_time"
+                            android:textColor="@color/main_order_item_bg"
+                            android:textSize="@dimen/str_defaul_18"
+                            android:visibility="gone"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lin_payType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/bbutton_info_dish_item">
+
+                            <TextView
+                                style="@style/staff_style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:gravity="left"
+                                android:padding="@dimen/dp5"
+                                android:text="@string/pay_info"/>
+                        </RelativeLayout>
+
+                        <cn.acewill.mobile.pos.widget.ScrolListView
+                            android:id="@+id/lv_payType"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/dp5"
+                            android:background="@color/white"
+                            android:divider="@color/line_gray"
+                            android:dividerHeight="1dip"
+                            android:footerDividersEnabled="true"
+                            android:transcriptMode="normal"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lin_member"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/bbutton_info_dish_item">
+
+                            <TextView
+                                style="@style/staff_style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:gravity="left"
+                                android:padding="@dimen/dp5"
+                                android:text="@string/member_info"/>
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/dp5"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/member_number"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="@dimen/dp5"
+                                android:text="@string/member_card_number_xx"
+                                android:textColor="@color/main_order_item_bg"
+                                android:textSize="@dimen/str_defaul_18"
+                                />
+
+                            <TextView
+                                android:id="@+id/member_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="@dimen/dp5"
+                                android:text="@string/member_name_xx"
+                                android:textColor="@color/main_order_item_bg"
+                                android:textSize="@dimen/str_defaul_18"
+                                />
+
+                            <TextView
+                                android:id="@+id/member_level"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="@dimen/dp5"
+                                android:text="@string/member_card_level"
+                                android:textColor="@color/main_order_item_bg"
+                                android:textSize="@dimen/str_defaul_18"
+                                />
+
+                            <TextView
+                                android:id="@+id/member_MemberConsumeCost"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="@dimen/dp5"
+                                android:text="@string/consume_money"
+                                android:textColor="@color/main_order_item_bg"
+                                android:textSize="@dimen/str_defaul_18"
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lin_saleOut"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/bbutton_info_dish_item">
+
+                            <TextView
+                                style="@style/staff_style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:gravity="left"
+                                android:padding="@dimen/dp5"
+                                android:text="@string/distribution_information"/>
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/dp5"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/sale_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="@dimen/dp5"
+                                android:text="姓        名:XXX"
+                                android:textColor="@color/main_order_item_bg"
+                                android:textSize="@dimen/str_defaul_18"
+                                />
+
+                            <TextView
+                                android:id="@+id/sale_phone"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="@dimen/dp5"
+                                android:text="@string/name_xx"
+                                android:textColor="@color/main_order_item_bg"
+                                android:textSize="@dimen/str_defaul_18"
+                                />
+
+                            <TextView
+                                android:id="@+id/sale_address"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="@dimen/dp5"
+                                android:text="@string/meals_address"
+                                android:textColor="@color/main_order_item_bg"
+                                android:textSize="@dimen/str_defaul_18"
+                                />
+
+                            <TextView
+                                android:id="@+id/sale_orderNumber"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="@dimen/dp5"
+                                android:text="@string/platform_order_number"
+                                android:textColor="@color/main_order_item_bg"
+                                android:textSize="@dimen/str_defaul_18"
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view_line3"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/font_gray"/>
+
+                <RelativeLayout
+                    android:id="@+id/rel_do"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lin_right_count">
+
+                    <LinearLayout
+                        android:id="@+id/lin_center_bottom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="@dimen/dp10"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/btn_refundDish"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp40"
+                            android:layout_weight="1"
+                            android:background="@drawable/btn_selector_bright_blue"
+                            android:gravity="center"
+                            android:text="@string/common_retreat"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/wx_login_btn_font"/>
+
+
+                        <TextView
+                            android:id="@+id/btn_refundOrder"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp40"
+                            android:layout_marginLeft="@dimen/dp10"
+                            android:layout_weight="1"
+                            android:background="@drawable/btn_selector_bright_blue"
+                            android:gravity="center"
+                            android:text="@string/refund_order"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/wx_login_btn_font"/>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/lin_right_bottom1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lin_center_bottom"
+                        android:layout_marginBottom="@dimen/dp10"
+                        android:layout_marginLeft="@dimen/dp10"
+                        android:layout_marginRight="@dimen/dp10"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/btn_rePrint"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp40"
+                            android:layout_weight="1"
+                            android:background="@drawable/btn_selector_bright_blue"
+                            android:gravity="center"
+                            android:text="@string/reprint_ticket"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/wx_login_btn_font"/>
+
+                        <TextView
+                            android:id="@+id/btn_reCheckOut"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp40"
+                            android:layout_marginLeft="@dimen/dp10"
+                            android:layout_weight="1"
+                            android:background="@drawable/btn_selector_bright_blue"
+                            android:gravity="center"
+                            android:text="@string/recheckout"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/wx_login_btn_font"/>
+
+
+                        <TextView
+                            android:id="@+id/btn_revokeInvoice"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp40"
+                            android:layout_marginLeft="@dimen/dp10"
+                            android:layout_weight="1"
+                            android:background="@drawable/btn_selector_bright_blue"
+                            android:gravity="center"
+                            android:text="@string/revokeInvoice"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/wx_login_btn_font"
+                            android:visibility="gone"/>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

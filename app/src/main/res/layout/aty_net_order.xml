@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <cn.acewill.mobile.pos.widget.TitleView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:id="@+id/login_title"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="@dimen/dp50"
+                                            app:rightLeftVisible="true"
+                                            app:titleText="@string/sth_home_netorders"/>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp35"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp10"
+            android:paddingRight="@dimen/dp10"
+            android:gravity="center"
+            android:background="@color/white_order_title"
+            >
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:text="订单编号"
+                android:textColor="@color/login_gray"
+                android:textSize="@dimen/sp14"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:text="下单时间"
+                android:gravity="center"
+                android:textColor="@color/login_gray"
+                android:textSize="@dimen/sp14"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="类型"
+                android:gravity="center"
+                android:textColor="@color/login_gray"
+                android:textSize="@dimen/sp14"
+                />
+            <TextView
+                android:id="@+id/tv_number"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:text="状态"
+                android:gravity="center"
+                android:textColor="@color/login_gray"
+                android:textSize="@dimen/sp14"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:text="操作"
+                android:gravity="right"
+                android:textColor="@color/login_gray"
+                android:textSize="@dimen/sp14"
+                />
+
+        </LinearLayout>
+        <View style="@style/sty_line"/>
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/order_srl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/order_lv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+
+</LinearLayout>

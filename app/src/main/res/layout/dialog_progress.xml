@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:layout_gravity="center"
+     >
+    <LinearLayout
+        android:layout_gravity="center"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical" 
+        >
+        <ProgressBar
+            android:id="@+id/progressbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundDimEnabled="false"
+            android:indeterminateDrawable="@drawable/progress_loading_white"
+            android:indeterminateDuration="2000"
+            android:windowBackground="@color/transparent"
+            android:windowFrame="@null" />
+
+        <TextView
+            android:id="@+id/textview_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:textColor="@color/yellow_bg"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</RelativeLayout><!--
+RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/FetionTheme.Dialog.Progress"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:minWidth="200dp" >
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="10dp" >
+        <ProgressBar
+            android:id="@+id/progressbar"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentLeft="true" />
+        <TextView
+            android:id="@+id/textview_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:textSize="14sp"
+            android:layout_toRightOf="@id/progressbar"
+            android:ellipsize="end"
+            android:maxLines="2" /></RelativeLayout></RelativeLayout
+-->

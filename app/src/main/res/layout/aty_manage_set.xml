@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical"
+              android:scrollbars="none">
+
+    <cn.acewill.mobile.pos.widget.TitleView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:id="@+id/login_title"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="@dimen/dp50"
+                                            app:rightLeftVisible="true"
+                                            app:titleText="@string/sth_home_setting"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:scrollbars="none">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp90"
+                android:gravity="center"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    style="@style/staff_style"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/is_create_qrcode_scan"/>
+
+                <CheckBox
+                    android:id="@+id/ck_select_zs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/tv_time_hint"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/item_spacing20"
+                    android:background="@drawable/selector_ck_area"
+                    android:button="@android:color/transparent"
+                    android:checked="false"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp60"
+                android:background="@color/white_order_title"
+                android:orientation="horizontal"
+
+                >
+
+                <TextView
+                    style="@style/staff_style"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/is_kitchen_ticket_show_dish_money"/>
+
+                <CheckBox
+                    android:id="@+id/ck_select_kitchMoney"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/tv_time_hint"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/item_spacing20"
+                    android:background="@drawable/selector_ck_area"
+                    android:button="@android:color/transparent"
+                    android:checked="false"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp60"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    style="@style/staff_style"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/is_receive_net_order"/>
+
+                <CheckBox
+                    android:id="@+id/ck_select_netorder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/tv_time_hint"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/item_spacing20"
+                    android:background="@drawable/selector_ck_area"
+                    android:button="@android:color/transparent"
+                    android:checked="false"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lin_automatic"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp60"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                >
+
+                <TextView
+                    style="@style/staff_style"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/is_automatic_receive_net_order"/>
+
+                <CheckBox
+                    android:id="@+id/ck_select_automatic_netorder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/tv_time_hint"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/item_spacing20"
+                    android:background="@drawable/selector_ck_area"
+                    android:button="@android:color/transparent"
+                    android:checked="false"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp60"
+                android:background="@color/white_order_title"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    style="@style/staff_style"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/create_order_is_show_package_name"/>
+
+                <CheckBox
+                    android:id="@+id/ck_select_printPackageName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/tv_time_hint"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/item_spacing20"
+                    android:background="@drawable/selector_ck_area"
+                    android:button="@android:color/transparent"
+                    android:checked="false"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp60"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    style="@style/staff_style"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/create_order_is_show_electronic_invoice_qrcode"/>
+
+                <CheckBox
+                    android:id="@+id/ck_select_printQrCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/tv_time_hint"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/item_spacing20"
+                    android:background="@drawable/selector_ck_area"
+                    android:button="@android:color/transparent"
+                    android:checked="false"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp60"
+                android:background="@color/white_order_title"
+                android:gravity="center"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    style="@style/staff_style"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/is_summary_receipt_show_kds_call_number"/>
+
+                <CheckBox
+                    android:id="@+id/ck_select_summary_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/tv_time_hint"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/item_spacing20"
+                    android:background="@drawable/selector_ck_area"
+                    android:button="@android:color/transparent"
+                    android:checked="false"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp60"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    style="@style/staff_style"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/take_out_order_automatic_receive"/>
+
+                <CheckBox
+                    android:id="@+id/ck_select_waiMai_order_receive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/tv_time_hint"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/item_spacing20"
+                    android:background="@drawable/selector_ck_area"
+                    android:button="@android:color/transparent"
+                    android:checked="true"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp60"
+                android:background="@color/white_order_title"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    style="@style/staff_style"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/select_take_out_is_fill_in_guest_info"/>
+
+                <CheckBox
+                    android:id="@+id/ck_select_waiMai_guest_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/tv_time_hint"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/item_spacing20"
+                    android:background="@drawable/selector_ck_area"
+                    android:button="@android:color/transparent"
+                    android:checked="false"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp60"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    style="@style/staff_style"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/is_create_order_JYJ"/>
+
+                <CheckBox
+                    android:id="@+id/ck_is_create_order_jyj"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/tv_time_hint"
+                    android:layout_centerVertical="false"
+                    android:layout_marginRight="@dimen/item_spacing20"
+                    android:background="@drawable/selector_ck_area"
+                    android:button="@android:color/transparent"
+                    android:checked="false"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp60"
+                android:background="@color/white_order_title"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    style="@style/staff_style"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/select_checkout_input_money"/>
+
+                <CheckBox
+                    android:id="@+id/ck_select_checkout_in_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/tv_time_hint"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/item_spacing20"
+                    android:background="@drawable/selector_ck_area"
+                    android:button="@android:color/transparent"
+                    android:checked="true"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp60"
+                android:background="@color/white_order_title"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    style="@style/staff_style"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/select_show_redish"/>
+
+                <CheckBox
+                    android:id="@+id/ck_select_show_reDish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/tv_time_hint"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/item_spacing20"
+                    android:background="@drawable/selector_ck_area"
+                    android:button="@android:color/transparent"
+                    android:checked="true"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

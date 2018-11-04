@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/coupon_item"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_spacing70"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/item_spacing10"
+        android:paddingRight="@dimen/item_spacing10"
+        android:background="@drawable/layout_selector_gray"
+        >
+        <TextView
+            android:id="@+id/coupon_name"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text=""
+            android:gravity="center_vertical"
+            android:textColor="@color/order_day_font_darkgray"
+            android:textSize="@dimen/str_defaul_16"
+            />
+
+        <LinearLayout
+            android:id="@+id/coupon_count_ll"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="0.5"
+            android:visibility="gone"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/reduce_coupon"
+                android:layout_width="@dimen/item_spacing22"
+                android:layout_height="@dimen/item_spacing22"
+                android:src="@mipmap/icon_reduce"/>
+            <TextView
+                android:id="@+id/coupon_count"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_marginRight="@dimen/item_spacing10"
+                android:layout_marginLeft="@dimen/item_spacing10"
+                android:textColor="@color/gray_search_text"
+                android:text="1"
+                android:textSize="@dimen/str_defaul_15"/>
+            <ImageView
+                android:id="@+id/add_coupon"
+                android:layout_width="@dimen/item_spacing25"
+                android:layout_height="@dimen/item_spacing25"
+                android:src="@mipmap/icon_add"/>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/selector_order_type"
+            android:layout_gravity="center_vertical"
+            />
+    </LinearLayout>
+    <View style="@style/sty_line"
+        android:paddingLeft="@dimen/item_spacing10"
+        android:paddingRight="@dimen/item_spacing10"
+        />
+</LinearLayout>

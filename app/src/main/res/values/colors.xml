@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="transparent">#00000000</color>
+    <color name="gray_app_bg">#ffeeeeee</color>
+    <color name="img_bg">#EEEEEE</color>
+    <color name="black_main_bg">#ff151a1e</color>
+    <color name="bg_color">#EEEEEE</color>
+
+    //app标题栏背景色
+    <color name="app_title_bg">#3ac5b9</color>
+    <color name="main_home_tab_bg">#ff32323a</color>
+    <color name="tab_check_blue">#ff0169b4</color>
+    <color name="blue_table_nomber_title">#ff45c8dc</color>
+    <color name="blue_table_nomber_title_pressed">#ff84e8f8</color>
+    <color name="blue_pressed">#ffdffafe</color>
+
+
+    //app字体颜色
+    <color name="app_text_color">#ff6e6e6e</color>
+    //价格颜色
+    <color name="app_text_price_color">#fff86b4f</color>
+    //灰色线条
+    <color name="app_line_gray_color">#ffcfcfcf</color>
+    //背景灰色
+    <color name="app_main_bg_gray">#fff1f1f1</color>
+
+    <color name="common_white">#FFFFFF</color>
+    <color name="common_white2">#f5f5f5</color>
+    <color name="common_black">#000000</color>
+    <color name="common_text_deep">#333333</color>
+    <color name="common_text_pink">#ff6666</color>
+    <color name="common_text_normal">#666666</color>
+    <color name="common_text_gray">#999999</color>
+    <color name="common_green">#33B35E</color>
+    <color name="common_orange">#FFAC1E</color>
+    <color name="common_yellow">#f3fbb2</color>
+    <color name="common_alldemo_bg">#F0F0F0</color>
+    <color name="common_vip_tab_bg">#F8F8F8</color>
+    <color name="order_leftmenu_gray">#f0f0f0</color>
+    <color name="order_leftmenu_deep">#d7d7d7</color>
+    <color name="orange">#FE800A</color>
+    <color name="black">#000000</color>
+    <color name="order_item_count_galy">#666666</color>
+    <!--<color name="title_bg">#f5f5f5</color>-->
+    <color name="title_bg">#ebebeb</color>
+    <color name="order_item_line_bg">#e6e6e6</color>
+    <color name="title_text_color">#7c97ab</color>
+    <color name="main_order_item_bg">#8f8f8f</color>
+    <color name="main_order_item_money_bg">#617889</color>
+    <color name="black_gv_title">#656565</color>
+    <color name="blue">#ff0077c3</color>
+    <color name="black_title">#0f0f0f</color>
+    <color name="red">#ff3e3e</color>
+    <color name="green">#0fa224</color>
+    <color name="pink">#aa03c8</color>
+    <color name="gray">#cfcfcf</color>
+    <color name="gray_1">#cfcfcf</color>
+    <color name="no_back">#00ffffff</color>
+    <color name="keyboard_decital_color">#030300</color>
+    <color name="white">#FFFFFF</color>
+    <color name="white_order_title">#fbfbfb</color>
+
+    <color name="green_nomal">#ff1ae461</color>
+    <color name="green_press">#ff76ea9f</color>
+
+    <!-- 下划线灰色 -->
+    <color name="line_gray">#dcdcdc</color>
+    <color name="font_black">#252729</color>
+    <color name="font_blue">#0077c3</color>
+    <color name="font_gray">#b8b8b8</color>
+    <color name="bg_gray">#e4e4e4</color>
+    <color name="gray_check_sth">#ff96a0a9</color>
+    <color name="select_blue">#0571b6</color>
+    <color name="half_trans">#e0FFFFFF</color>
+    <color name="bg_white">#FFFFFF</color>
+    <color name="bbutton__pink">#ffcccc</color>
+    <color name="bbutton_danger">#ffd9534f</color>
+    <color name="bbutton_danger_edge">#ffd43f3a</color>
+    <color name="bbutton_danger_pressed">#ffd2322d</color>
+    <color name="bbutton_danger_pressed_edge">#ffac2925</color>
+    <color name="bbutton_danger_disabled">#a5d9534f</color>
+    <color name="bbutton_danger_disabled_edge">#a5d43f3a</color>
+    <color name="bbutton_info">#ff5bc0de</color>
+    <color name="bbutton_info_edge">#ff46b8da</color>
+    <color name="bbutton_info_pressed">#ff39b3d7</color>
+    <color name="bbutton_info_pressed_edge">#ff269abc</color>
+    <color name="bbutton_info_dish_item">#ff65b3ec</color>
+    <color name="bbutton_info_order_blue">#ff65b3ec</color>
+    <color name="bbutton_info_disabled">#a55bc0de</color>
+    <color name="bbutton_info_disabled_edge">#a546b8da</color>
+    <color name="transform">#00000000</color>
+    <color name="layout_gray">#f6f6f6</color>
+    <color name="actionsheet_red">#FD4A2E</color>
+    <color name="gray_search_text">#4e4e4e</color>
+    <color name="login_black_tv">#32323a</color>
+    <color name="login_gray">#898989</color>
+    <color name="login_set_font_black">#28282e</color>
+    <color name="bg_commont_color">#f1f1f1</color>
+    <color name="order_day_font_gray">#777777</color>
+    <color name="order_day_font_darkgray">#666666</color>
+    <color name="btn_blue">#1fb5ad</color>
+    <color name="btn_blue_pressed">#1ca59e</color>
+    <color name="btn_red">#f86b4f</color>
+    <color name="btn_red_pressed">#ed5e41</color>
+    <color name="golden">#ffb68044</color>
+    <color name="half_trans_gray">#ab333333</color>
+    <color name="half_trans_light_gray">#44000000</color>
+
+    <!--新颜色-->
+    <color name="blue_bg">#1fbba6</color>
+    <color name="bg_common">#eae8ef</color>
+    <color name="blue_bg_dark">#1fab98</color>
+    <color name="tab_font_color">#272636</color>
+    <color name="yellow_bg">#ff9900</color>
+    <color name="light_gray">#fffefd</color>
+    <color name="light_gray_btn">#cccccc</color>
+    <color name="order_line">#bfbfbf</color>
+    <color name="dishkind_bg_gray">#efefef</color>
+    <color name="dishitem_count_font_gray">#a9a9a9</color>
+    <color name="creat_btn_select">#d66500</color>
+    <color name="half_trans_lightgray">#09000000</color>
+    <color name="half_trans_dark_gray">#0F000000</color>
+    <color name="blue_dark_check">#262a33</color>
+    <color name="blue_dark_font">#252932</color>
+    <color name="sale_out_gray">#c8c8c8</color>
+    <color name="main_order_dish_title_color">#7c97ab</color>
+    <color name="main_order_dish_title_color_select">#a4aaae</color>
+
+
+</resources>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/app_title_bg"
+        android:textSize="20sp"
+        android:textStyle="bold" 
+        android:paddingTop="5dp"/>
+    <View 
+        android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:background="#cccccc"
+        android:layout_marginTop="2dp"/>
+
+    <cn.acewill.mobile.pos.widget.ScrolListView
+        android:id="@+id/lv_sv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:divider="#00ffffff"
+        android:dividerHeight="10dp" 
+        android:layout_marginTop="10dp">
+    </cn.acewill.mobile.pos.widget.ScrolListView>
+
+</LinearLayout>

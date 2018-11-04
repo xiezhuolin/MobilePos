@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/border"
+              android:focusable="true"
+              android:focusableInTouchMode="true"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/retreat_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp45"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:text="@string/sth_dishName"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp18"
+        />
+
+    <View style="@style/sty_line"
+          android:id="@+id/view_line"
+        android:layout_below="@+id/retreat_title"
+        />
+
+    <LinearLayout
+        android:id="@+id/lin_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp40"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dp10"
+        android:layout_marginTop="@dimen/dp25"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dp10"
+        android:paddingRight="@dimen/dp10">
+
+        <TextView
+            android:id="@+id/dialog_cancle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/dp5"
+            android:layout_weight="1"
+            android:background="@drawable/btn_selector_gray"
+            android:gravity="center"
+            android:text="@string/common_cancel"
+            android:textColor="@color/login_gray"
+            android:textSize="@dimen/sp15"
+            />
+
+        <TextView
+            android:id="@+id/dialog_ok"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp5"
+            android:layout_weight="1"
+            android:background="@drawable/btn_selector_blue"
+            android:gravity="center"
+            android:text="@string/common_sure"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp15"
+            />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/lin_bottom"
+        android:layout_below="@+id/view_line"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:id="@+id/rel_discount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp15"
+                android:layout_marginRight="@dimen/dp15"
+                android:layout_marginTop="@dimen/dp20"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+               >
+
+                <TextView
+                    android:id="@+id/dish_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/dish_price"
+                    android:visibility="gone"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp18"
+                    />
+
+                <cn.acewill.mobile.pos.widget.ScrolGridView
+                    android:id="@+id/gv_discount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/dish_price"
+                    android:background="@color/white"
+                    android:footerDividersEnabled="true"
+                    android:horizontalSpacing="@dimen/item_spacing5"
+                    android:listSelector="@color/transparent"
+                    android:numColumns="2"
+                    android:padding="@dimen/item_spacing5"
+                    android:scrollbars="none"
+                    android:verticalSpacing="@dimen/item_spacing5"
+                    />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</RelativeLayout>

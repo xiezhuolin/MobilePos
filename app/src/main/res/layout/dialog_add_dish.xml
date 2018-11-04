@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/border"
+              android:orientation="vertical"
+              android:scrollbars="none">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="5dp">
+
+        <RelativeLayout
+            android:id="@+id/rel_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            >
+
+            <TextView
+                android:id="@+id/tv_dishName_title"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:gravity="center"
+                android:padding="@dimen/item_spacing8"
+                android:text="@string/sth_dishName"
+                android:textColor="@color/app_text_color"
+                android:textSize="@dimen/str_defaul_16"/>
+
+            <ImageView
+                android:id="@+id/img_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:padding="@dimen/item_spacing15"
+                android:src="@mipmap/img_order_close"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp1"
+                android:layout_below="@+id/tv_dishName_title"
+                android:background="@color/gray"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/lin_do"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_spacing45"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/item_spacing10"
+            android:layout_marginBottom="@dimen/item_spacing5"
+            android:layout_marginTop="@dimen/item_spacing15"
+            android:orientation="horizontal"
+            >
+
+            <Button
+                android:id="@+id/btn_cancle"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/btn_clean_bg"
+                android:gravity="center"
+                android:text="@string/common_cancel"
+                android:textColor="@color/font_black"
+                android:textSize="@dimen/str_defaul_15"
+                />
+
+            <Button
+                android:id="@+id/btn_ok"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="@dimen/item_spacing10"
+                android:layout_weight="1"
+                android:background="@drawable/btn_check_out_bg"
+                android:gravity="center"
+                android:text="@string/common_sure"
+                android:textColor="@color/white"
+                android:textSize="@dimen/str_defaul_15"
+                />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/ed_note"
+            style="@style/setting_edidtext_style"
+            android:layout_above="@+id/lin_do"
+            android:layout_margin="@dimen/item_spacing10"
+            android:layout_marginTop="@dimen/item_spacing5"
+            android:hint="@string/sth_note_hine"
+            android:textColorHint="@color/gray"
+            />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/ed_note"
+            android:layout_below="@+id/rel_top"
+            android:scrollbars="none">
+
+            <cn.acewill.mobile.pos.widget.ScrolListView
+                android:id="@+id/lv_option"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:divider="@color/transparent"
+                android:dividerHeight="0dip"
+                android:footerDividersEnabled="true"
+                />
+        </ScrollView>
+
+    </RelativeLayout>
+
+</LinearLayout>

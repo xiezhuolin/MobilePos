@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/bg_common"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp50"
+        android:background="@color/blue_bg">
+
+        <LinearLayout
+            android:id="@+id/back_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/layout_selector"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp10"
+            android:paddingRight="@dimen/dp15">
+
+            <ImageView
+                android:layout_width="@dimen/dp25"
+                android:layout_height="@dimen/dp25"
+                android:src="@drawable/back_press"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/page_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="确认结账"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp18"/>
+
+        <LinearLayout
+            android:id="@+id/active_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/layout_selector"
+            android:gravity="center"
+            android:paddingLeft="@dimen/dp10"
+            android:paddingRight="@dimen/dp10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="营销方案"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp13"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp45"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dp15"
+        android:paddingRight="@dimen/dp15">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="优惠"
+            android:textColor="@color/login_gray"
+            android:textSize="@dimen/sp15"/>
+
+        <TextView
+            android:id="@+id/active_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleY="1.1"
+            android:text="0.0"
+            android:textColor="@color/orange"
+            android:textSize="@dimen/sp17"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="￥"
+            android:textColor="@color/orange"
+            android:textSize="@dimen/sp11"/>
+    </LinearLayout>
+
+    <View style="@style/sty_line"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp45"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dp15"
+        android:paddingRight="@dimen/dp15">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="合计"
+            android:textColor="@color/login_gray"
+            android:textSize="@dimen/sp15"/>
+
+        <TextView
+            android:id="@+id/pay_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleY="1.1"
+            android:text="0.0"
+            android:textColor="@color/btn_blue"
+            android:textSize="@dimen/sp17"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="￥"
+            android:textColor="@color/btn_blue"
+            android:textSize="@dimen/sp11"/>
+    </LinearLayout>
+
+    <View style="@style/sty_line"/>
+
+    <LinearLayout
+        android:id="@+id/reduce_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp35"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp15"
+            android:paddingRight="@dimen/dp15"
+            >
+
+            <TextView
+                android:id="@+id/reduce_name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="减免金额"
+                android:textColor="@color/login_gray"
+                android:textSize="@dimen/sp13"/>
+
+            <TextView
+                android:id="@+id/reduce_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleY="1.1"
+                android:text="0.0"
+                android:textColor="@color/btn_blue"
+                android:textSize="@dimen/sp13"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="￥"
+                android:textColor="@color/btn_blue"
+                android:textSize="@dimen/sp11"/>
+        </LinearLayout>
+
+        <View style="@style/sty_line"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp35"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dp15"
+        android:paddingRight="@dimen/dp15">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/dp25"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="已支付"
+                android:textColor="@color/login_gray"
+                android:textSize="@dimen/sp13"/>
+
+            <TextView
+                android:id="@+id/payed_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleY="1.1"
+                android:text="0.0"
+                android:textColor="@color/green"
+                android:textSize="@dimen/sp17"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="￥"
+                android:textColor="@color/green"
+                android:textSize="@dimen/sp11"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp25"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:id="@+id/nopay_name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="未支付"
+                android:textColor="@color/login_gray"
+                android:textSize="@dimen/sp13"/>
+
+            <TextView
+                android:id="@+id/nopay_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleY="1.1"
+                android:text="0.0"
+                android:textColor="@color/btn_red_pressed"
+                android:textSize="@dimen/sp17"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/symbol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="￥"
+                android:textColor="@color/btn_red_pressed"
+                android:textSize="@dimen/sp11"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp50"
+        android:layout_marginTop="@dimen/dp5"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/dp15"
+            android:text="请选择支付方式"
+            android:textColor="@color/login_gray"
+            android:textSize="@dimen/sp14"/>
+
+        <TextView
+            android:id="@+id/refersh_id"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center|right"
+            android:paddingRight="@dimen/dp15"
+            android:text="刷新订单号"
+            android:textColor="@color/login_gray"
+            android:textSize="@dimen/sp14"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+
+    <View
+        style="@style/sty_line"
+        android:background="@color/order_line"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <ListView
+            android:id="@+id/pay_type_list"
+            style="@style/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/dp50"
+            android:background="@color/white"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp50"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <View style="@style/sty_line_dark"/>
+
+            <TextView
+                android:id="@+id/pay_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/order_btn_selector"
+                android:gravity="center"
+                android:text="结  账"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp16"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

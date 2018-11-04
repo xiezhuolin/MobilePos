@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/dp50"
+              android:orientation="horizontal"
+              android:background="@color/white">
+
+    <TextView
+        android:id="@+id/tv_name"
+        style="@style/staff_style"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.7"
+        android:textSize="@dimen/str_defaul_14"
+        android:gravity="center"
+        android:text="xx"/>
+
+    <TextView
+        android:id="@+id/tv_ip"
+        style="@style/staff_style"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.7"
+        android:gravity="center"
+        android:textSize="@dimen/str_defaul_12"
+        android:text="192.168.0.1"/>
+
+    <TextView
+        android:id="@+id/tv_associatedInfo"
+        style="@style/staff_style"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:textSize="@dimen/str_defaul_14"
+        android:gravity="center"
+        />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:orientation="vertical"
+        android:layout_weight="0.7"
+        android:gravity="center"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/img_state"
+            android:layout_width="@dimen/dp40"
+            android:src="@mipmap/img_state_ok"
+            android:visibility="gone"
+            android:layout_height="@dimen/dp40"/>
+
+        <TextView
+            android:id="@+id/tv_wating"
+            android:layout_width="wrap_content"
+            android:text="@string/waiting_for_detection"
+            android:textSize="@dimen/str_defaul_14"
+            android:textColor="@color/black_gv_title"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_do"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/btn_selector_bright_blue"
+        android:gravity="center"
+        android:layout_weight="0.7"
+        android:paddingTop="@dimen/dp5"
+        android:paddingBottom="@dimen/dp5"
+        android:layout_marginLeft="@dimen/dp15"
+        android:layout_marginRight="@dimen/dp15"
+        android:layout_marginTop="@dimen/dp5"
+        android:layout_marginBottom="@dimen/dp5"
+        android:text="@string/common_test_print"
+        android:textColor="@color/white"
+        android:textSize="@dimen/str_defaul_14"
+        />
+
+
+</LinearLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:background="@drawable/border_gray"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/item_spacing3"
+        android:background="@color/white_order_title"
+        android:orientation="horizontal"
+        >
+
+        <cn.acewill.mobile.pos.widget.ComTextView
+            android:id="@+id/scan_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:text="@string/sel_wft_payType"
+            android:textColor="@color/bbutton_info"
+            app:textSize="25"/>
+
+        <cn.acewill.mobile.pos.widget.ComTextView
+            android:id="@+id/scan_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:paddingLeft="@dimen/item_spacing30"
+            android:paddingRight="@dimen/item_spacing15"
+            android:text="@string/close"
+            android:textColor="@color/bbutton_info"
+            app:textSize="25"/>
+    </RelativeLayout>
+
+    <View style="@style/sty_line"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/wx_ll"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/item_spacing10"
+            android:layout_weight="1"
+            android:background="@drawable/btn_selector_yellow"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <cn.acewill.mobile.pos.widget.ComTextView
+                android:id="@+id/wx_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sth_wx"
+                android:textColor="@color/order_day_font_darkgray"
+                app:setHeight="false"
+                app:textSize="60"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ali_ll"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/item_spacing10"
+            android:layout_weight="1"
+            android:background="@drawable/btn_selector_yellow"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <cn.acewill.mobile.pos.widget.ComTextView
+                android:id="@+id/ali_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sth_zfb"
+                android:textColor="@color/order_day_font_darkgray"
+                app:setHeight="false"
+                app:textSize="60"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

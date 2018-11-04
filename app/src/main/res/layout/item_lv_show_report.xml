@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:background="@color/transparent">
+    <View
+        style="@style/sty_line"
+        />
+    <TextView
+        android:id="@+id/tv_categorySales_title"
+        android:layout_width="match_parent"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:text="1111"
+        android:textSize="@dimen/sp20"
+        android:paddingTop="@dimen/dp10"
+        android:paddingBottom="@dimen/dp10"
+        android:layout_height="wrap_content"/>
+    <View
+        style="@style/sty_line"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/item_spacing5"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/check_out_tickt_text"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="@string/ct_cp"
+            android:textSize="@dimen/sp18"/>
+
+        <TextView
+            style="@style/check_out_tickt_text"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/sth_dishSum"
+            android:textSize="@dimen/sp18"/>
+
+        <TextView
+            style="@style/check_out_tickt_text"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="right|center_vertical"
+            android:text="@string/sth_dishPrice"
+            android:textSize="@dimen/sp18"/>
+    </LinearLayout>
+
+    <View
+        style="@style/sty_line"
+        android:layout_marginTop="@dimen/dp10"
+        />
+    <cn.acewill.mobile.pos.widget.ScrolListView
+        android:id="@+id/lv_categorySales"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:cacheColorHint="@color/transparent"
+        android:listSelector="@color/transparent"
+        android:divider="@color/transparent"
+        android:footerDividersEnabled="true"
+        android:transcriptMode="normal"
+        />
+
+</LinearLayout>

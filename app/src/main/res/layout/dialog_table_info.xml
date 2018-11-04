@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/border"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_spacing50"
+        android:layout_margin="@dimen/item_spacing3"
+        android:background="@color/white_order_title"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/item_spacing15">
+
+        <TextView
+            android:id="@+id/print_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="@string/standby_tableNumber__info"
+            android:textColor="@color/order_day_font_gray"
+            android:textSize="@dimen/str_defaul_18"/>
+
+        <LinearLayout
+            android:id="@+id/print_close_ll"
+            android:layout_width="@dimen/item_spacing50"
+            android:layout_height="match_parent"
+            android:gravity="right"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/item_spacing15">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|right"
+                android:src="@mipmap/close"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View style="@style/sty_line"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/item_spacing3"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/lin_money1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/text_little_padding">
+
+                <TextView
+                    android:id="@+id/tv_tableNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:paddingRight="10dp"
+                    android:text="@string/order_type_ct"
+                    android:textColor="@color/app_text_color"
+                    android:textSize="@dimen/str_defaul_20"/>
+
+                <cn.acewill.mobile.pos.widget.CommonEditText
+                    android:id="@+id/ed_tableNumber"
+                    style="@style/base_width_match"
+                    android:layout_height="40dp"
+                    android:background="@drawable/border"
+                    android:digits="@string/table_digits"
+                    android:gravity="center_vertical"
+                    android:hint="@string/standby_tableNumber_hine"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:padding="@dimen/item_spacing5"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lin_money"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/text_little_padding">
+
+                <TextView
+                    android:id="@+id/tv_standby_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:paddingRight="10dp"
+                    android:text="@string/common_peo_num"
+                    android:textColor="@color/app_text_color"
+                    android:textSize="@dimen/str_defaul_20"/>
+
+                <cn.acewill.mobile.pos.widget.CommonEditText
+                    android:id="@+id/ed_peopleNums"
+                    style="@style/base_width_match"
+                    android:layout_height="40dp"
+                    android:background="@drawable/border"
+                    android:gravity="center_vertical"
+                    android:hint="@string/standby_peopleNums_hine"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:padding="@dimen/item_spacing5"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_spacing50"
+                android:layout_marginBottom="@dimen/item_spacing20"
+                android:layout_marginLeft="@dimen/item_spacing15"
+                android:layout_marginRight="@dimen/item_spacing15"
+                android:layout_marginTop="@dimen/item_spacing25"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/print_cancle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/item_spacing5"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_selector_gray"
+                    android:gravity="center"
+                    android:text="@string/common_cancel"
+                    android:textColor="@color/order_day_font_darkgray"
+                    android:textSize="@dimen/str_defaul_16"/>
+
+                <TextView
+                    android:id="@+id/print_ok"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/item_spacing5"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_selector_blue"
+                    android:gravity="center"
+                    android:text="@string/common_sure"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/str_defaul_16"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

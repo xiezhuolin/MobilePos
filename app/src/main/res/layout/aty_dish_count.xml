@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+    <TextView
+        android:id="@+id/btn_dishCount"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp40"
+        android:layout_weight="1"
+        android:background="@drawable/btn_selector_bright_blue"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:text="@string/sell_out"
+        android:textColor="@color/white"
+        android:textSize="@dimen/wx_login_btn_font"/>
+
+
+
+    <RelativeLayout
+        android:layout_above="@+id/btn_dishCount"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <cn.acewill.mobile.pos.widget.TitleView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                android:id="@+id/login_title"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="@dimen/dp50"
+                                                app:rightLeftVisible="true"
+                                                app:titleText="菜品沽清"/>
+
+        <!--菜品列表-->
+        <LinearLayout
+            android:id="@+id/top_ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dp50"
+            android:orientation="horizontal">
+
+            <ListView
+                android:id="@+id/dishKinds"
+                style="@style/listView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/dishkind_bg_gray"/>
+
+            <ListView
+                android:id="@+id/dishItems"
+                style="@style/listView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2.2"
+                android:background="@color/white"
+                android:scrollbars="vertical"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

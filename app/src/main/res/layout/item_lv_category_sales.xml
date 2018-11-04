@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              android:background="@color/transparent">
+
+
+    <TextView
+        android:id="@+id/tv_dishName"
+        style="@style/check_out_tickt_text"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:text="@string/ct_cp"
+        android:textSize="@dimen/sp18"/>
+
+    <TextView
+        android:id="@+id/tv_count"
+        style="@style/check_out_tickt_text"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/sth_dishSum"
+        android:textSize="@dimen/sp18"/>
+
+    <TextView
+        android:id="@+id/tv_price"
+        style="@style/check_out_tickt_text"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:gravity="right|center_vertical"
+        android:text="@string/sth_dishPrice"
+        android:textSize="@dimen/sp18"/>
+
+
+</LinearLayout>

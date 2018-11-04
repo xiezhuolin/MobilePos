@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+              android:background="@drawable/border"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_spacing50"
+        android:background="@color/white_order_title"
+        android:orientation="horizontal"
+        android:layout_margin="@dimen/item_spacing3"
+        android:paddingLeft="@dimen/item_spacing15">
+
+        <TextView
+            android:id="@+id/print_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/up_load_log"
+            android:gravity="center_vertical"
+            android:textColor="@color/order_day_font_gray"
+            android:textSize="@dimen/str_defaul_20" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_spacing70"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/item_spacing10"
+        android:paddingRight="@dimen/item_spacing10"
+        android:layout_marginTop="@dimen/item_spacing10"
+        android:paddingBottom="@dimen/item_spacing10"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/log"
+            android:textColor="@color/login_gray"
+            android:textSize="@dimen/str_defaul_15" />
+
+        <TextView
+            android:id="@+id/beforday"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/item_spacing50"
+            android:layout_marginLeft="@dimen/item_spacing15"
+            android:paddingRight="@dimen/item_spacing5"
+            android:paddingLeft="@dimen/item_spacing5"
+            android:paddingTop="@dimen/item_spacing5"
+            android:paddingBottom="@dimen/item_spacing5"
+            android:background="@drawable/btn_selector_red"
+            android:gravity="center"
+            android:text="@string/up_load_the_day_before_yesterday"
+            android:textColor="@color/white"
+            android:textSize="@dimen/str_defaul_14"
+            />
+
+        <TextView
+            android:id="@+id/yesterday"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/item_spacing50"
+            android:layout_marginLeft="@dimen/item_spacing15"
+            android:paddingRight="@dimen/item_spacing5"
+            android:paddingLeft="@dimen/item_spacing5"
+            android:paddingTop="@dimen/item_spacing5"
+            android:paddingBottom="@dimen/item_spacing5"
+            android:background="@drawable/btn_selector_red"
+            android:gravity="center"
+            android:text="@string/up_load_yesterday"
+            android:textColor="@color/white"
+            android:textSize="@dimen/str_defaul_14"
+            />
+
+        <TextView
+            android:id="@+id/today"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/item_spacing50"
+            android:layout_marginLeft="@dimen/item_spacing15"
+            android:paddingRight="@dimen/item_spacing5"
+            android:paddingLeft="@dimen/item_spacing5"
+            android:paddingTop="@dimen/item_spacing5"
+            android:paddingBottom="@dimen/item_spacing5"
+            android:background="@drawable/btn_selector_red"
+            android:gravity="center"
+            android:text="@string/up_load_today"
+            android:textColor="@color/white"
+            android:textSize="@dimen/str_defaul_14"
+            />
+    </LinearLayout>
+
+</LinearLayout>

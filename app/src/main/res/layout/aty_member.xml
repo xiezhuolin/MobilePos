@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:background="@drawable/border"
+              android:orientation="vertical"
+              android:focusable="true"
+              android:focusableInTouchMode="true"
+              android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/rel_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp40"
+        android:layout_margin="@dimen/dp2"
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/member"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:background="@color/white"
+            android:padding="@dimen/dp10"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp14"
+            />
+
+        <TextView
+            android:id="@+id/tv_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/item_spacing20"
+            android:padding="@dimen/item_spacing10"
+            android:text="@string/text_search"
+            android:textColor="@color/bbutton_info_dish_item"
+            android:textSize="@dimen/sp14"
+            />
+        </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_spacing50"
+        android:gravity="center_vertical"
+        android:background="@color/bg_commont_color"
+        android:orientation="horizontal">
+
+        <cn.acewill.mobile.pos.widget.CommonEditText
+            android:id="@+id/search_cotent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/dp6"
+            android:background="@drawable/layout_circle_bg"
+            android:gravity="center_vertical"
+            android:drawableLeft="@mipmap/img_search_order"
+            android:hint="@string/text_member_search"
+            android:drawablePadding="@dimen/dp10"
+            android:paddingLeft="@dimen/dp20"
+            android:singleLine="true"
+            android:inputType="number"
+            android:digits="@string/filter_vcode"
+            android:imeOptions="actionSearch"
+            android:textColor="@color/gray_search_text"
+            android:textSize="@dimen/sp16"
+            />
+
+        <LinearLayout
+            android:id="@+id/search_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="@dimen/item_spacing10"
+            android:paddingRight="@dimen/item_spacing20"
+            >
+
+            <ImageView
+                android:layout_width="@dimen/item_spacing20"
+                android:layout_height="@dimen/item_spacing20"
+                android:background="@mipmap/close_back"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:textColor="@color/red"
+        android:textSize="@dimen/sp14"
+        android:padding="@dimen/dp10"
+        android:gravity="center"
+        android:background="@color/white"
+        android:text="@string/sth_menber_hine"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp50"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dp10"
+        android:paddingRight="@dimen/dp10"
+        android:gravity="center"
+        android:background="@color/main_order_item_money_bg"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/member_card_type"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp14"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/member_card_number"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp14"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/phone_number"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp14" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/card_level"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp14" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/cardholder_name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp14" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/cardholder_sex"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp14" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/activate_card_time"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp14" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            android:text="@string/state"
+            android:visibility="gone"
+            android:gravity="right"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp14"
+            />
+    </LinearLayout>
+    <View style="@style/sty_line"/>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/order_srl"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_margin="@dimen/dp2"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/order_lv"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="match_parent"/>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</LinearLayout>

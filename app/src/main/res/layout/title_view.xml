@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/title_group"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/bbutton_info_order_blue"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/title_left"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/layout_selector"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dp10"
+        android:paddingRight="@dimen/dp15">
+
+        <ImageView
+            android:layout_width="@dimen/dp30"
+            android:layout_height="@dimen/dp30"
+            android:src="@drawable/back_press" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/title_center"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="标题"
+        android:textColor="@color/layout_gray"
+        android:textSize="@dimen/sp18" />
+
+    <LinearLayout
+        android:id="@+id/title_right_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/layout_selector"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dp10"
+        android:paddingRight="@dimen/dp10"
+        >
+        <ImageView
+            android:id="@+id/title_icon"
+            android:layout_width="@dimen/dp25"
+            android:layout_height="@dimen/dp25"
+             />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/right_left_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@drawable/layout_selector"
+        android:gravity="center"
+        android:paddingLeft="@dimen/dp10"
+        android:paddingRight="@dimen/dp10"
+        android:layout_toLeftOf="@id/title_right_icon"
+        android:visibility="gone"
+        >
+        <ImageView
+            android:id="@+id/right_icon"
+            android:layout_width="@dimen/dp25"
+            android:layout_height="@dimen/dp25"
+            />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/title_right"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:gravity="center"
+        android:text="添加"
+        android:textColor="@color/layout_gray"
+        android:textSize="@dimen/sp18" />
+
+</RelativeLayout>
