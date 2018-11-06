@@ -252,15 +252,15 @@ public class DishService {
 						if (response.getResult() == 0) {
 							List<Payment> paymentList = new ArrayList<Payment>();
 							for (Payment p : response.getPaymentTypes()) {
-								if (p.getStatus() == 1 && p.getId() != 3 && p.getId() != 4&& p.getId() != 5 && p
+								if (p.getStatus() == 1 && p.getId() != 3 && p.getId() != 4 && p
 										.getId() != -33 && p.getId() != -31
 										&& p.getId() != -30) {
 									paymentList.add(p);
 								}
 								//如果不是会员，那么不显示会员的支付方式
-								if (p.getId() == 5 && posInfo.getAccountMember() != null) {
-										paymentList.add(p);
-								}
+//								if (p.getId() == 5 && posInfo.getAccountMember() != null) {
+//										paymentList.add(p);
+//								}
 							}
 							StoreInfor.setPaymentList(paymentList);
 							return paymentList;

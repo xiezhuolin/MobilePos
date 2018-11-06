@@ -186,6 +186,7 @@ public class CreateOrderAty extends BaseActivity {
 					.returnXMLStr("whether_to_exit"), new DialogCallback() {
 				@Override
 				public void onConfirm() {
+					myApplication.isSyncNetOrderInit = false;
 				}
 
 				@Override

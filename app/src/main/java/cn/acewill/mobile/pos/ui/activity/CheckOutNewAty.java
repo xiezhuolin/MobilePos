@@ -13,15 +13,14 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.acewill.paylibrary.alipay.config.AlipayConfig;
 import com.acewill.paylibrary.epay.AliGoodsItem;
-import com.acewill.paylibrary.tencent.WXPay;
 
 import org.greenrobot.eventbus.EventBus;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
@@ -31,6 +30,7 @@ import butterknife.OnClick;
 import cn.acewill.mobile.pos.R;
 import cn.acewill.mobile.pos.base.activity.BaseActivity;
 import cn.acewill.mobile.pos.common.DishDataController;
+import cn.acewill.mobile.pos.common.StoreInfor;
 import cn.acewill.mobile.pos.config.MyApplication;
 import cn.acewill.mobile.pos.config.Store;
 import cn.acewill.mobile.pos.exception.PosServiceException;
@@ -195,7 +195,17 @@ public class CheckOutNewAty extends BaseActivity {
 						if (isInit) {
 							initView();
 							switchLogic();
-							getPayType();
+							List<Payment> list = ToolsUtils
+									.cloneTo(StoreInfor.getPaymentList());
+							if (posInfo.getAccountMember() == null) {
+								Iterator<Payment> iterator = list.iterator();
+								while (iterator.hasNext()) {
+									Payment next = iterator.next();
+									if (next.getId() == 5)
+										iterator.remove();
+								}
+							}
+							payTypeAdapter.setData(list);
 						} else {
 							showToast("获取订单号成功,订单号为:" + result);
 						}
@@ -329,46 +339,6 @@ public class CheckOutNewAty extends BaseActivity {
 		}
 	}
 
-	//获取支付方式列表
-	private void getPayType() {
-//		if (StoreInfor.getPaymentList() != null && StoreInfor.getPaymentList().size() > 0) {
-//			initAliAndWx(StoreInfor.getPaymentList());
-//			payTypeAdapter.setData(StoreInfor.getPaymentList());
-//			return;
-//		}
-		dishService.getPaytypeList(new ResultCallback<List<Payment>>() {
-			@Override
-			public void onResult(List<Payment> result) {
-				if (result != null && result.size() > 0) {
-					initAliAndWx(result);
-					payTypeAdapter.setData(result);
-				}
-			}
-
-			@Override
-			public void onError(PosServiceException e) {
-			}
-		});
-	}
-
-	//为支付宝和微信支付参数赋值
-	private void initAliAndWx(List<Payment> result) {
-		for (Payment payment : result) {
-			if (payment.getId() == 1) {//支付宝
-				AlipayConfig.APPID = payment.getAppIDs();
-				AlipayConfig.key = payment.getKeyStr();
-			}
-			if (payment.getId() == 2) {//微信
-				WXPay.APPID = payment.getAppIDs();
-				WXPay.KEY = payment.getKeyStr();
-				WXPay.MCH_ID = payment.getMchID();
-				WXPay.APPSECRET = payment.getAppsecret();
-				if (!TextUtils.isEmpty(payment.getSubMchID())) {
-					WXPay.SUB_MCH_ID = payment.getSubMchID();
-				}
-			}
-		}
-	}
 
 	public String getBiz_id() {
 		return biz_id;

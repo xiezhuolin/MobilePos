@@ -43,7 +43,8 @@ public class MyApplication extends Application {
     private static Context context;
     private static Resources res;
     private static MyApplication mInstance;
-    private Toast toast;
+	public static boolean isSyncNetOrderInit =false;
+	private Toast toast;
     private Handler handler = new Handler();
 
     private boolean isWriteLog = true;//是否开启错误日志

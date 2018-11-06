@@ -2,9 +2,12 @@ package cn.acewill.mobile.pos.ui.activity;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.ComponentName;
 import android.content.Intent;
+import android.content.ServiceConnection;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.IBinder;
 import android.os.Looper;
 import android.os.PowerManager;
 import android.support.v4.app.FragmentTransaction;
@@ -18,6 +21,9 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.acewill.paylibrary.alipay.config.AlipayConfig;
+import com.acewill.paylibrary.tencent.WXPay;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -61,11 +67,13 @@ import cn.acewill.mobile.pos.model.dish.Cart;
 import cn.acewill.mobile.pos.model.event.PosEvent;
 import cn.acewill.mobile.pos.model.order.MarketingActivity;
 import cn.acewill.mobile.pos.model.order.Order;
+import cn.acewill.mobile.pos.model.payment.Payment;
 import cn.acewill.mobile.pos.model.user.UserData;
 import cn.acewill.mobile.pos.printer.Printer;
 import cn.acewill.mobile.pos.printer.PrinterTemplates;
 import cn.acewill.mobile.pos.printer.usb.GpUsbPrinter;
 import cn.acewill.mobile.pos.printer.usb.UsbPrinter;
+import cn.acewill.mobile.pos.receivenetorder.UpLoadOrderService;
 import cn.acewill.mobile.pos.service.DialogCallback;
 import cn.acewill.mobile.pos.service.DishService;
 import cn.acewill.mobile.pos.service.OrderService;
@@ -141,7 +149,7 @@ public class OrderDishMainAty extends BaseActivity {
 			//关闭轮训获取网上订单的开关
 			MyApplication.getInstance().setConFirmNetOrder(false);
 			EventBus.getDefault().unregister(this);
-
+			stopService();
 			if (usbPrinter != null) {
 				usbPrinter.unbindService();
 			}
@@ -187,8 +195,10 @@ public class OrderDishMainAty extends BaseActivity {
 		EventBus.getDefault().register(this);
 		mUserData = UserData.getInstance(context);
 		posSinUsbScreenController = PosSinUsbScreenController.getInstance();
+		initService();
 		loadData();
 		getWorkShiftDefinition();
+		initPosData();
 	}
 
 	/**
@@ -598,80 +608,88 @@ public class OrderDishMainAty extends BaseActivity {
 
 	private void showMainActivity() {
 		initView();
-//		getKindInfo();
-//		getPayType();
-		getLogoPath();
-		getMarketList();
-		getStoreMarket();
-		getPrinterList();
-		getKDSList();
-		getKitchenStalls();
-		getAllTemplates();
-		getOrderDiscountTypes();
-		//        SyncPrinterAndKds();
 	}
 
 	/**
+	 * 初始化POS的数据
+	 */
+	private void initPosData() {
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+				getLogoPath();
+				getMarketList();
+				getStoreMarket();
+				getPrinterList();
+				getKDSList();
+				getKitchenStalls();
+				getAllTemplates();
+				getOrderDiscountTypes();
+				getPayType();
+			}
+		}).start();
+	}
+	/**
 	 * 获取菜品分类数据
 	 */
-//	private void getKindInfo() {
-//		progressDialog.showLoading("");
-//		DishService dishService = null;
-//		try {
-//			dishService = DishService.getInstance();
-//		} catch (PosServiceException e) {
-//			e.printStackTrace();
-//			return;
-//		}
-//		dishService.getKindDataInfo(new ResultCallback<List<DishType>>() {
-//			@Override
-//			public void onResult(List<DishType> result) {
-//				progressDialog.disLoading();
-//				if (result != null && result.size() > 0) {
-//					DishDataController.dishKindList = result;
-//					getDishInfo();
-//				} else {
-//					showToast(ToolsUtils.returnXMLStr("get_dish_kind_is_null"));
-//					Log.i("获取菜品分类为空", "");
-//				}
-//			}
-//
-//			@Override
-//			public void onError(PosServiceException e) {
-//				showToast(ToolsUtils.returnXMLStr("get_dish_kind_error") + "," + e.getMessage());
-//				Log.i("获取菜品分类为空", e.getMessage());
-//			}
-//		});
-//	}
+	//	private void getKindInfo() {
+	//		progressDialog.showLoading("");
+	//		DishService dishService = null;
+	//		try {
+	//			dishService = DishService.getInstance();
+	//		} catch (PosServiceException e) {
+	//			e.printStackTrace();
+	//			return;
+	//		}
+	//		dishService.getKindDataInfo(new ResultCallback<List<DishType>>() {
+	//			@Override
+	//			public void onResult(List<DishType> result) {
+	//				progressDialog.disLoading();
+	//				if (result != null && result.size() > 0) {
+	//					DishDataController.dishKindList = result;
+	//					getDishInfo();
+	//				} else {
+	//					showToast(ToolsUtils.returnXMLStr("get_dish_kind_is_null"));
+	//					Log.i("获取菜品分类为空", "");
+	//				}
+	//			}
+	//
+	//			@Override
+	//			public void onError(PosServiceException e) {
+	//				showToast(ToolsUtils.returnXMLStr("get_dish_kind_error") + "," + e.getMessage());
+	//				Log.i("获取菜品分类为空", e.getMessage());
+	//			}
+	//		});
+	//	}
 
 	/**
 	 * 得到菜品数据  dishList
 	 */
-//	private void getDishInfo() {
-//		DishService dishService = null;
-//		try {
-//			dishService = DishService.getInstance();
-//		} catch (PosServiceException e) {
-//			e.printStackTrace();
-//			return;
-//		}
-//		dishService.getDishList(new ResultCallback<List<Menu>>() {
-//			@Override
-//			public void onResult(List<Menu> result) {
-//				progressDialog.disLoading();
-//				if (result != null && result.size() > 0) {
-//					DishDataController.setDishData(result);
-//				}
-//			}
-//
-//			@Override
-//			public void onError(PosServiceException e) {
-//				showToast(e.getMessage());
-//				Log.i("获取菜品为空", e.getMessage());
-//				progressDialog.disLoading();
-//			}
-//		});
-//	}
+	//	private void getDishInfo() {
+	//		DishService dishService = null;
+	//		try {
+	//			dishService = DishService.getInstance();
+	//		} catch (PosServiceException e) {
+	//			e.printStackTrace();
+	//			return;
+	//		}
+	//		dishService.getDishList(new ResultCallback<List<Menu>>() {
+	//			@Override
+	//			public void onResult(List<Menu> result) {
+	//				progressDialog.disLoading();
+	//				if (result != null && result.size() > 0) {
+	//					DishDataController.setDishData(result);
+	//				}
+	//			}
+	//
+	//			@Override
+	//			public void onError(PosServiceException e) {
+	//				showToast(e.getMessage());
+	//				Log.i("获取菜品为空", e.getMessage());
+	//				progressDialog.disLoading();
+	//			}
+	//		});
+	//	}
 
 	/**
 	 * 获取全单的折扣信息列表
@@ -1664,5 +1682,81 @@ public class OrderDishMainAty extends BaseActivity {
 		}
 	}
 
+	private UpLoadOrderService service;
+	private ServiceConnection conn2 = new ServiceConnection() {
 
+
+		@Override
+		public void onServiceConnected(ComponentName name, IBinder binder) {
+			isBound = true;
+			UpLoadOrderService.MyBinder myBinder = (UpLoadOrderService.MyBinder) binder;
+			service = myBinder.getService();
+			Log.i("DemoLog", "ActivityA onServiceConnected");
+			if (!MyApplication.isSyncNetOrderInit) {
+				service.startTimer(0);
+				MyApplication.isSyncNetOrderInit = true;
+			}
+		}
+
+		@Override
+		public void onServiceDisconnected(ComponentName name) {
+			isBound = false;
+			Log.i("DemoLog", "ActivityA onServiceDisconnected");
+		}
+	};
+	public boolean isBound;
+
+	private void initService() {
+		Intent intent = new Intent(this, UpLoadOrderService.class);
+		intent.putExtra("from", "ScreenProtectedActivity_new");
+		Log.i("DemoLog", "----------------------------------------------------------------------");
+		Log.i("DemoLog", "ScreenProtectedActivity_new 执行 bindService");
+		bindService(intent, conn2, BIND_AUTO_CREATE);
+	}
+
+	private void stopService() {
+		unbindService(conn2);
+		//		stopService(new Intent(this, UpLoadOrderService.class));
+	}
+
+
+	//获取支付方式列表
+	private void getPayType() {
+		//		if (StoreInfor.getPaymentList() != null && StoreInfor.getPaymentList().size() > 0) {
+		//			initAliAndWx(StoreInfor.getPaymentList());
+		//			payTypeAdapter.setData(StoreInfor.getPaymentList());
+		//			return;
+		//		}
+		dishService.getPaytypeList(new ResultCallback<List<Payment>>() {
+			@Override
+			public void onResult(List<Payment> result) {
+				if (result != null && result.size() > 0) {
+					initAliAndWx(result);
+				}
+			}
+
+			@Override
+			public void onError(PosServiceException e) {
+			}
+		});
+	}
+
+	//为支付宝和微信支付参数赋值
+	private void initAliAndWx(List<Payment> result) {
+		for (Payment payment : result) {
+			if (payment.getId() == 1) {//支付宝
+				AlipayConfig.APPID = payment.getAppIDs();
+				AlipayConfig.key = payment.getKeyStr();
+			}
+			if (payment.getId() == 2) {//微信
+				WXPay.APPID = payment.getAppIDs();
+				WXPay.KEY = payment.getKeyStr();
+				WXPay.MCH_ID = payment.getMchID();
+				WXPay.APPSECRET = payment.getAppsecret();
+				if (!TextUtils.isEmpty(payment.getSubMchID())) {
+					WXPay.SUB_MCH_ID = payment.getSubMchID();
+				}
+			}
+		}
+	}
 }

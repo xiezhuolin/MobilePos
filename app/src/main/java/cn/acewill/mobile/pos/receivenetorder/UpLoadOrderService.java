@@ -247,8 +247,7 @@ public class UpLoadOrderService extends Service {
 					Log.i(TAG, Thread.currentThread().getId() + ">网络订单和平台订单号分别是>" + order
 							.getId() + "-------" + result);
 					if (result > 0) {
-						order.setId(result);
-						createOrder(dishs, order);
+						createOrder(dishs, order,result);
 					} else {
 						Log.i(TAG, "startTimer11");
 						startTimer(0);
@@ -274,7 +273,7 @@ public class UpLoadOrderService extends Service {
 
 	private int excuteCount;
 
-	private synchronized void createOrder(List<Dish> dishs, final Order netOrder) {
+	private synchronized void createOrder(List<Dish> dishs, final Order netOrder, Long smarant_orderId) {
 		try {
 			OrderService orderService = OrderService.getInstance();
 			Order        order        = null;
@@ -286,6 +285,7 @@ public class UpLoadOrderService extends Service {
 			if (order != null) {
 				final long orderId = order.getId();
 				order.setRefNetOrderId(orderId);
+				order.setId(smarant_orderId);
 				order.setThirdPlatformOrderId(netOrder.getOuterOrderid());
 				order.setThirdPlatformOrderIdView(netOrder.getOuterOrderIdView());
 				order.setThirdPlatfromOrderIdDaySeq(netOrder.getOuterOrderIdDaySeq());

@@ -509,4 +509,6 @@ public class PosInfo {
     public void setTableNumber(String tableNumber) {
         this.tableNumber = tableNumber;
     }
+
+
 }
