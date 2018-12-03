@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="cn.acewill.mobile.pos">
+<manifest package="cn.acewill.mobile.pos"
+          xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.MEDIA_MOUNTED"/>
     <uses-permission android:name="android.permission.BLUETOOTH"/>
@@ -55,8 +55,9 @@
         <activity android:name="cn.acewill.mobile.pos.ui.activity.SettingActivity"/>
         <activity android:name="cn.acewill.mobile.pos.ui.activity.OrderDishMainAty"/>
         <activity android:name="cn.acewill.mobile.pos.ui.activity.CreateOrderAty"/>
-        <activity android:name="cn.acewill.mobile.pos.ui.activity.CheckOutNewAty"
-                  android:launchMode="singleTask"
+        <activity
+            android:name="cn.acewill.mobile.pos.ui.activity.CheckOutNewAty"
+            android:launchMode="singleTask"
             />
         <activity android:name="cn.acewill.mobile.pos.ui.activity.OrderInfoAty"/>
         <activity android:name="cn.acewill.mobile.pos.ui.activity.DishCountAty"/>
@@ -106,7 +107,7 @@
             </intent-filter>
         </service>
 
-
+        <service android:name=".receivenetorder.UpLoadOrderService"></service>
     </application>
 
 </manifest>

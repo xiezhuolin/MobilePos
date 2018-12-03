@@ -14,8 +14,8 @@ android {
         applicationId "cn.acewill.mobile.pos"
         minSdkVersion 18
         targetSdkVersion 23
-        versionCode 1118
-        versionName "1.1.1.8"
+        versionCode 1119
+        versionName "1.1.1.9"
         //解决编译build时的 Unable to execute dex: method ID not in [0, 0xffff]: 65536 错误
         multiDexEnabled true
     }

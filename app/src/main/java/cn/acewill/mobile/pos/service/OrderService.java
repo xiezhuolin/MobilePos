@@ -4,6 +4,8 @@ import android.content.Context;
 import android.text.TextUtils;
 import android.util.Log;
 
+import com.google.gson.Gson;
+
 import org.greenrobot.eventbus.EventBus;
 
 import java.math.BigDecimal;
@@ -28,6 +30,7 @@ import cn.acewill.mobile.pos.service.retrofit.RetrofitOrderService;
 import cn.acewill.mobile.pos.service.retrofit.response.KDSResponse;
 import cn.acewill.mobile.pos.service.retrofit.response.PosResponse;
 import cn.acewill.mobile.pos.utils.Constant;
+import cn.acewill.mobile.pos.utils.FileLog;
 import cn.acewill.mobile.pos.utils.ToolsUtils;
 import rx.Observable;
 import rx.android.schedulers.AndroidSchedulers;
@@ -91,7 +94,7 @@ public class OrderService {
 	}
 
 	public static OrderService getJyjOrderService() throws PosServiceException {
-		Store  store   = Store.getInstance(MyApplication.getInstance().getContext());
+		Store store = Store.getInstance(MyApplication.getInstance().getContext());
 		String baseUrl = "http://" + store.getServiceAddressJyj() + ":" + store
 				.getStorePortJyj() + "/";
 		internalJYJService = RetrofitFactory.buildKdsService(baseUrl, RetrofitOrderService.class);
@@ -274,7 +277,8 @@ public class OrderService {
 	 * 2.2 如果失败，不打印厨房单， 只打印一张下单失败的小票给顾客（上面有比如微信的支付流水号这些信息方便顾客退款）
 	 */
 	public void createOrder(final Order order, ResultCallback<Order> resultCallback) {
-		Store                store               = Store
+		FileLog.log("下单的订单内容>" + new Gson().toJson(order));
+		Store store = Store
 				.getInstance(MyApplication.getInstance().getContext());
 		RetrofitOrderService tempInternalService = null;
 		boolean              isCreateOrderJyj    = store.isCreateOrderJyj();
@@ -392,7 +396,7 @@ public class OrderService {
 
 	//给已有订单添加菜品
 	/*public void appendOrder(long orderId, List<CreateOrder.MyOrderItme> items, ResultCallback<Integer> resultCallback) {
-        internalService.appendOrder(orderId, items).map(new Func1<PosResponse<Integer>, Integer>() {
+	    internalService.appendOrder(orderId, items).map(new Func1<PosResponse<Integer>, Integer>() {
             @Override
             public Integer call(PosResponse<Integer> orderPosResponse) {
                 if (orderPosResponse.isSuccessful()) {

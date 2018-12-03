@@ -267,14 +267,18 @@ public class CheckOutNewAty extends BaseActivity {
 				avtive_money = (BigDecimal) getIntent().getSerializableExtra("active_money");
 				tableName = getIntent().getStringExtra("tableName");
 				String activeName = getIntent().getStringExtra("activityName");
+
+				//				total_money =ToolsUtils.wipeZeroMoney(originalCost);
 				BigDecimal cartCost = new BigDecimal(cart.getCost())
 						.setScale(2, BigDecimal.ROUND_HALF_UP);
-				temp_money = total_money = nopay_money = ToolsUtils.wipeZeroMoney(cartCost);
-				wipingValue = cartCost.subtract(total_money);
-				payMoney.setText(total_money.setScale(2, BigDecimal.ROUND_DOWN) + "");//合计
+				temp_money = nopay_money = ToolsUtils.wipeZeroMoney(cartCost);
+
 
 				printOrder = cart.getOrderItem(tableOrder, cart.getDishItemList());
 				orderItems = cart.getOrderItem(tableOrder, cart.getDishItemList()).getItemList();
+				total_money = new BigDecimal(printOrder.getTotal());
+//				wipingValue = cartCost.subtract(total_money);
+				payMoney.setText(total_money.setScale(2, BigDecimal.ROUND_DOWN) + "");//合计
 				updateTicket();//switchLogic case 0
 
 				payTypeAdapter.setOrder(printOrder);
@@ -315,7 +319,7 @@ public class CheckOutNewAty extends BaseActivity {
 					BigDecimal cartCost2 = new BigDecimal(table.getCost())
 							.setScale(2, BigDecimal.ROUND_HALF_UP);
 					temp_money = total_money = nopay_money = ToolsUtils.wipeZeroMoney(cartCost2);
-					wipingValue = cartCost2.subtract(total_money);
+//					wipingValue = cartCost2.subtract(total_money);
 					payMoney.setText(total_money.setScale(2, BigDecimal.ROUND_DOWN) + "");
 					updateTicket();//switchLogic case 2
 
@@ -658,8 +662,16 @@ public class CheckOutNewAty extends BaseActivity {
 			printOrder.setGive_money(nopay_money);
 		}
 		nopayMoney.setText(nopay_money.setScale(2, BigDecimal.ROUND_DOWN) + "");
+		//		if (avtive_money != null && avtive_money.compareTo(BigDecimal.ZERO) > 0) {
 		payedMoney
-				.setText(total_money.subtract(nopay_money).setScale(2, BigDecimal.ROUND_DOWN) + "");
+				.setText(total_money.subtract(nopay_money).subtract(avtive_money)
+						.setScale(2, BigDecimal.ROUND_DOWN) + "");
+		//		} else {
+		//			payedMoney
+		//					.setText(total_money.subtract(nopay_money)
+		//							.setScale(2, BigDecimal.ROUND_DOWN) + "");
+		//		}
+
 		if (accountMember != null) {
 			pageTitle.setText(accountMember.getName() + "的订单");
 		}
@@ -1194,7 +1206,7 @@ public class CheckOutNewAty extends BaseActivity {
 			printOrder.setAvtive_money(new BigDecimal(Cart.getPriceSum())
 					.setScale(2, BigDecimal.ROUND_DOWN));//优惠金额为订单总价
 		} else {
-			printOrder.setCost(total_money.setScale(2, BigDecimal.ROUND_DOWN)
+			printOrder.setCost(total_money.subtract(avtive_money).setScale(2, BigDecimal.ROUND_DOWN)
 					.toString());//注意，此处total_money已经是计算了服务费与营销活动后的金额
 			printOrder.setTake_money(cart.getTakeMoney());
 			if (anyCheckoutPrintMoney != null) {

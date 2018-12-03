@@ -1727,18 +1727,27 @@ public class OrderDishMainAty extends BaseActivity {
 		//			payTypeAdapter.setData(StoreInfor.getPaymentList());
 		//			return;
 		//		}
-		dishService.getPaytypeList(new ResultCallback<List<Payment>>() {
-			@Override
-			public void onResult(List<Payment> result) {
-				if (result != null && result.size() > 0) {
-					initAliAndWx(result);
+		DishService dishService = null;
+		try {
+			dishService = DishService.getInstance();
+			final DishService finalDishService = dishService;
+			dishService.getPaytypeList(new ResultCallback<List<Payment>>() {
+				@Override
+				public void onResult(List<Payment> result) {
+					if (result != null && result.size() > 0) {
+						initAliAndWx(result);
+						finalDishService.getCachedDishDao().savePaymentType(result);
+					}
 				}
-			}
 
-			@Override
-			public void onError(PosServiceException e) {
-			}
-		});
+				@Override
+				public void onError(PosServiceException e) {
+				}
+			});
+		} catch (PosServiceException e) {
+			e.printStackTrace();
+		}
+
 	}
 
 	//为支付宝和微信支付参数赋值

@@ -258,7 +258,7 @@ public class MarketDataController {
 									if (dishMarketList != null && dishMarketList.size() > 0) {
 										ToolsUtils
 												.removeItemForMarkType(dishMarketList, MarketType.SALES);
-										dish.setCost(dish.getDishPrice());
+										dish.setCost(dish.getCost());
 										dish.setTempPrice(dish.getDishPrice());
 										dishIdList.add(dishList.get(i).getDishId());
 									}

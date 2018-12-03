@@ -6,8 +6,8 @@
               android:orientation="vertical"
     >
 
-    <cn.acewill.mobile.pos.widget.TitleView xmlns:app="http://schemas.android.com/apk/res-auto"
-                                            android:id="@+id/login_title"
+    <cn.acewill.mobile.pos.widget.TitleView android:id="@+id/login_title"
+                                            xmlns:app="http://schemas.android.com/apk/res-auto"
                                             android:layout_width="match_parent"
                                             android:layout_height="@dimen/dp50"
                                             app:rightLeftVisible="true"
@@ -27,25 +27,26 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:orientation="horizontal"
+                android:layout_height="match_parent"
                 android:background="@color/white"
-                android:padding="@dimen/dp5"
-                android:layout_height="match_parent">
+                android:orientation="horizontal"
+                android:padding="@dimen/dp5">
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:orientation="vertical">
+
                     <TextView
                         android:id="@+id/order_num"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="17000"
                         android:gravity="center"
-                        android:textStyle="bold"
+                        android:text="17000"
                         android:textColor="@color/main_order_item_bg"
                         android:textSize="@dimen/str_defaul_18"
+                        android:textStyle="bold"
                         />
                 </LinearLayout>
 
@@ -54,23 +55,25 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:orientation="vertical">
+
                     <TextView
                         android:id="@+id/order_tableName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="xx:A2"
                         android:gravity="center"
+                        android:text="xx:A2"
                         android:textColor="@color/main_order_item_bg"
                         android:textSize="@dimen/str_defaul_18"
                         />
+
                     <TextView
                         android:id="@+id/order_source"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="wx"
                         android:gravity="center"
                         android:paddingBottom="@dimen/dp5"
                         android:paddingTop="@dimen/dp5"
+                        android:text="wx"
                         android:textColor="@color/black_gv_title"
                         android:textSize="@dimen/str_defaul_18"
                         />
@@ -87,25 +90,27 @@
                         android:id="@+id/order_eatType"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/eat_in"
                         android:gravity="center"
+                        android:text="@string/eat_in"
                         android:textColor="@color/main_order_item_bg"
                         android:textSize="@dimen/str_defaul_18"
                         />
+
                     <TextView
                         android:id="@+id/order_paystate"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/paid"
                         android:gravity="center"
-                        android:paddingTop="@dimen/dp5"
                         android:paddingBottom="@dimen/dp5"
+                        android:paddingTop="@dimen/dp5"
+                        android:text="@string/paid"
                         android:textColor="@color/main_order_item_bg"
                         android:textSize="@dimen/str_defaul_18"
                         />
                 </LinearLayout>
 
             </LinearLayout>
+
             <View
                 android:id="@+id/view_line5"
                 android:layout_width="match_parent"
@@ -224,6 +229,68 @@
 
 
             </RelativeLayout>
+            <!--<RelativeLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@color/bbutton_info_dish_item">-->
+            <View
+                android:id="@+id/view_line3"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/font_gray"/>
+            <!--<TextView-->
+            <!--style="@style/staff_style"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:gravity="left"-->
+            <!--android:padding="@dimen/dp5"-->
+            <!--android:text="@string/pay_info"/>-->
+            <!--</RelativeLayout>-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_spacing50"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/pay_info"
+                    android:textColor="@color/bbutton_info_order_blue"
+                    android:textSize="@dimen/str_defaul_18"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/item_spacing40"
+                    android:layout_marginLeft="@dimen/item_spacing8"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_selector_bright_blue"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/str_defaul_18"
+                    android:visibility="invisible"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/item_spacing40"
+                    android:layout_marginLeft="@dimen/item_spacing8"
+                    android:layout_marginRight="@dimen/dp5"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_selector_red"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/str_defaul_18"
+                    android:visibility="invisible"
+                    />
+            </LinearLayout>
+
+
 
             <RelativeLayout
                 android:id="@+id/lin_right"
@@ -319,20 +386,6 @@
                         android:orientation="vertical"
                         android:visibility="gone">
 
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="@color/bbutton_info_dish_item">
-
-                            <TextView
-                                style="@style/staff_style"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_centerVertical="true"
-                                android:gravity="left"
-                                android:padding="@dimen/dp5"
-                                android:text="@string/pay_info"/>
-                        </RelativeLayout>
 
                         <cn.acewill.mobile.pos.widget.ScrolListView
                             android:id="@+id/lv_payType"
@@ -489,11 +542,7 @@
 
                 </LinearLayout>
 
-                <View
-                    android:id="@+id/view_line3"
-                    android:layout_width="match_parent"
-                    android:layout_height="0.5dp"
-                    android:background="@color/font_gray"/>
+
 
                 <RelativeLayout
                     android:id="@+id/rel_do"

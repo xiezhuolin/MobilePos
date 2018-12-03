@@ -99,14 +99,30 @@ public class Cart {
 
 	/**
 	 * 会员结账时，改成会员价
+	 * <p>
+	 * 拓展
+	 * int a = bigdemical.compareTo(bigdemical2)
+	 * a = -1,表示bigdemical小于bigdemical2；
+	 * a = 0,表示bigdemical等于bigdemical2；
+	 * a = 1,表示bigdemical大于bigdemical2；
+	 * ---------------------
+	 * 作者：Haiwe
+	 * 来源：CSDN
+	 * 原文：https://blog.csdn.net/github_36859217/article/details/79229417
+	 * 版权声明：本文为博主原创文章，转载请附上博文链接！
 	 */
+	//	dishPrice - dishCost
 	public static void changeToMemberPrice() {
 		if (!ToolsUtils.isList(dishItemList)) {
 			int size = dishItemList.size();
 			for (int i = 0; i < size; i++) {
 				Dish dish = dishItemList.get(i);
-				dish.setPrice(dish.getMemberPrice());
-				dish.setCost(dish.getMemberPrice());
+				if (dish.getMemberPrice() != null && dish.getMemberPrice()
+						.compareTo(dish.getPrice()) <= 0) {
+					dish.setPrice(dish.getMemberPrice());
+					if (dish.getCost().compareTo(dish.getMemberPrice()) >0)
+						dish.setCost(dish.getMemberPrice());
+				}
 			}
 		}
 		notifyContentChange();

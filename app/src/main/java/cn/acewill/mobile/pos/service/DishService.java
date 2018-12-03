@@ -57,6 +57,10 @@ public class DishService {
 		cachedDishDao = new CachedDao();
 	}
 
+	public CachedDao getCachedDishDao() {
+		return cachedDishDao;
+	}
+
 	public void getKindDataInfo(final ResultCallback<List<DishType>> resultCallback) {
 		//如果无法连接服务器，则从本地数据库获取信息
 		if (!ServerStatus.getInstance().isRunning()) {
@@ -258,9 +262,9 @@ public class DishService {
 									paymentList.add(p);
 								}
 								//如果不是会员，那么不显示会员的支付方式
-//								if (p.getId() == 5 && posInfo.getAccountMember() != null) {
-//										paymentList.add(p);
-//								}
+								//								if (p.getId() == 5 && posInfo.getAccountMember() != null) {
+								//										paymentList.add(p);
+								//								}
 							}
 							StoreInfor.setPaymentList(paymentList);
 							return paymentList;
@@ -272,18 +276,18 @@ public class DishService {
 					}
 				}).subscribeOn(Schedulers.io());
 
-		ob.observeOn(Schedulers.io())
-				.subscribe(new ResultSubscriber(new ResultCallback<List<Payment>>() {
-					@Override
-					public void onResult(List<Payment> result) {
-						cachedDishDao.savePaymentType(result);
-					}
-
-					@Override
-					public void onError(PosServiceException e) {
-
-					}
-				}));
+		//		ob.observeOn(Schedulers.io())
+		//				.subscribe(new ResultSubscriber(new ResultCallback<List<Payment>>() {
+		//					@Override
+		//					public void onResult(List<Payment> result) {
+//		cachedDishDao.savePaymentType(result);
+		//					}
+		//
+		//					@Override
+		//					public void onError(PosServiceException e) {
+		//
+		//					}
+		//				}));
 
 		ob.observeOn(AndroidSchedulers.mainThread())
 				.subscribe(new ResultSubscriber<List<Payment>>(resultCallback));

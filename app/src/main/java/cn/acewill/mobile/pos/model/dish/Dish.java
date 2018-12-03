@@ -448,8 +448,8 @@ public class Dish extends BaseModel implements Serializable {
 	}
 
 	public void setCost(BigDecimal cost) {
-		this.cost = cost;
-		this.tempPrice = cost;
+			this.cost = cost;
+			this.tempPrice = cost;
 	}
 
 	public void setOnlyCost(BigDecimal cost) {

@@ -429,7 +429,7 @@ public class LoginAty extends BaseActivity implements DialogView {
 	 */
 	private void getStoreConfiguration() {
 		try {
-			StoreBusinessService storeBusinessService = StoreBusinessService.getInstance();
+			final StoreBusinessService storeBusinessService = StoreBusinessService.getInstance();
 			storeBusinessService.getStoreConfiguration(new ResultCallback<StoreConfiguration>() {
 				@Override
 				public void onResult(StoreConfiguration result) {
@@ -443,7 +443,7 @@ public class LoginAty extends BaseActivity implements DialogView {
 						StoreInfor.cardNumberMode = result.isCardNumberMode();
 						StoreInfor.setRepastPopulation(result.isRetreatCheckAuthority());
 						StoreInfor.wipeZero = result.getWipeZero();
-
+						storeBusinessService.getDao().saveStoreConfiguration(result);
 						jumpTableMain();
 					}
 				}

@@ -611,6 +611,7 @@ public class PayTypeAdapter extends BaseAdapter implements
 				task.execute(model);
 			}
 		} else {
+			
 			//调用扫码枪
 			scanGunDialog();
 		}

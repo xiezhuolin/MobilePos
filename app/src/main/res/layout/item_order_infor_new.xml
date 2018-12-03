@@ -16,28 +16,26 @@
         android:paddingRight="@dimen/dp10"
         >
 
-        <cn.acewill.mobile.pos.widget.ComTextView
+        <TextView
             android:id="@+id/dish_name"
             style="@style/check_out_tickt_text"
-            android:layout_height="match_parent"
             android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="left|center_vertical"
             android:text="@string/ct_cp"
-            app:setHeight="false"
-            app:textSize="30"
+            android:textSize="@dimen/str_defaul_18"
             />
 
-        <cn.acewill.mobile.pos.widget.ComTextView
+        <TextView
             android:id="@+id/dish_count"
             style="@style/check_out_tickt_text"
-            android:layout_height="match_parent"
             android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_weight="0.8"
             android:gravity="center"
             android:text="@string/dish_price_count"
-            app:setHeight="false"
-            app:textSize="30"
+            android:textSize="@dimen/str_defaul_18"
             />
 
         <cn.acewill.mobile.pos.widget.ComTextView
@@ -47,8 +45,8 @@
             android:layout_height="match_parent"
             android:layout_weight="0.6"
             android:gravity="right"
-            android:visibility="gone"
             android:text="0.00"
+            android:visibility="gone"
             app:setHeight="false"
             app:textSize="30"
             />
@@ -62,8 +60,8 @@
 
             <Button
                 android:id="@+id/btn_add"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="31dp"
+                android:layout_height="31dp"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:background="@drawable/icon_add_selector"
@@ -83,8 +81,8 @@
 
             <Button
                 android:id="@+id/btn_minus"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="31dp"
+                android:layout_height="31dp"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="@dimen/item_spacing10"
                 android:layout_toStartOf="@+id/tv_count"
@@ -98,11 +96,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/item_spacing5"
+        android:paddingBottom="@dimen/dp5"
         android:paddingLeft="@dimen/dp10"
         android:paddingRight="@dimen/dp10"
-        android:visibility="gone"
-        android:paddingBottom="@dimen/dp5"
         android:textColor="@color/creat_btn_select"
         android:textSize="@dimen/str_defaul_20"
+        android:visibility="gone"
         />
 </LinearLayout>

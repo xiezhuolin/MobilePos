@@ -1118,11 +1118,11 @@ public class DialogUtil {
 						} else if (coupon.getType() == 2) {
 							OrderItem orderItem = getCartDishById(coupon.getProducts()
 									.get(0), orderItems);
-							int balance = orderItem.getMemberPrice().multiply(new BigDecimal("100"))
+							int balance = orderItem.getCost().multiply(new BigDecimal("100"))
 									.intValue();
 							consumAmount += balance;
 							giftdinos.add(coupon.getCoupon_ids().get(0));
-							money = orderItem.getMemberPrice().floatValue();
+							money = orderItem.getCost().floatValue();
 
 
 							List<WshCreateDeal.Pruduct> products = new ArrayList<>();
@@ -1130,7 +1130,7 @@ public class DialogUtil {
 							pruduct.name = orderItem.getDishName();
 							pruduct.no = orderItem.getDishId() + "";
 							pruduct.num = orderItem.getQuantity();
-							pruduct.price = orderItem.getMemberPrice().multiply(new BigDecimal(100))
+							pruduct.price = orderItem.getCost().multiply(new BigDecimal(100))
 									.intValue();//传的是分?????
 							pruduct.is_activity = 2;//不参加活动
 							products.add(pruduct);
@@ -1324,7 +1324,7 @@ public class DialogUtil {
 			if (coupon.getType() == 2) {//菜品券
 				for (OrderItem item : orderItems) {
 					if (item.dishId == coupon.getProducts().get(0)) {
-						coupon.setDeno(item.getMemberPrice().floatValue());
+						coupon.setDeno(item.getCost().floatValue());
 						usefulCoupons.add(coupon);
 					}
 				}
